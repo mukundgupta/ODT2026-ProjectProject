@@ -58,14 +58,14 @@ By the final review, this README should clearly show:
 
 | Name | Primary Role | Secondary Role | Strengths Brought to the Project |
 |---|---|---|---|
-| `[Student 1]` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
-| `[Student 2]` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
+| `Mukund Gupta` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
+| `Manan Gupta` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
 
 ## 1.3 Project Title
-`[Enter the title of your project]`
+`Project Project`
 
 ## 1.4 One-Line Pitch
-`[Describe your project in one sentence]`
+`A virtual and physical obstacle course with a physical vehicle and projected paths which react in real-time to physical movement`
 
 ## 1.5 Expanded Project Idea
 In 1–2 paragraphs, explain:
