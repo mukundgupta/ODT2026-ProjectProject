@@ -209,18 +209,18 @@ What features are nice to have but not essential?
 ## 6.1 Project Type
 Check all that apply.
 
-- [ ] Electronics-based
-- [ ] Mechanical
-- [ ] Sensor-based
-- [ ] App-connected
-- [ ] Motorized
-- [ ] Sound-based
-- [ ] Light-based
-- [ ] Screen/UI-based
+- [-] Electronics-based
+- [-] Mechanical
+- [-] Sensor-based
+- [-] App-connected
+- [-] Motorized
+- [-] Sound-based
+- [-] Light-based
+- [-] Screen/UI-based
 - [ ] Fabricated structure
-- [ ] Game logic based
-- [ ] Installation / tabletop experience
-- [ ] Other: `[Write here]`
+- [-] Game logic based
+- [-] Installation
+- [-] Other: `Wifi connectivity`
 
 ## 6.2 High-Level System Description
 Explain how the system works in simple terms.
