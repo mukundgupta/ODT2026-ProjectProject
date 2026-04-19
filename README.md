@@ -1,4 +1,5 @@
-# Open Design and Technology  
+# Open Design and Technology
+
 ## Final Project README
 
 > **Project Weight:** 70%  
@@ -13,11 +14,13 @@
 # Before you begin
 
 ## Fork and rename this repository
+
 After forking this repository, rename it using the format:
 
 `ODT-2026-TeamName`
 
 ### Example
+
 `ODT-2026-PixelWizards`
 
 Do not keep the default repository name.
@@ -30,6 +33,7 @@ This file is your team’s **working project document**.
 
 You must keep updating it throughout the 4-week build period.  
 By the final review, this README should clearly show:
+
 - your idea,
 - your planning,
 - your design decisions,
@@ -40,6 +44,7 @@ By the final review, this README should clearly show:
 - your final outcome.
 
 ## Rules
+
 - Fill every section.
 - Do not delete headings.
 - If something does not apply, write `Not applicable` and explain why.
@@ -52,39 +57,46 @@ By the final review, this README should clearly show:
 # 1. Team Identity
 
 ## 1.1 Studio / Group Name
+
 `[Enter your group name]`
 
 ## 1.2 Team Members
 
-| Name | Primary Role | Secondary Role | Strengths Brought to the Project |
-|---|---|---|---|
-| `Mukund Gupta` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
-| `Manan Gupta` | `[Electronics / Coding / App / Fabrication / Mechanics]` | `[Role]` | `[Write here]` |
+| Name           | Primary Role                                    | Secondary Role | Strengths Brought to the Project |
+| -------------- | ----------------------------------------------- | -------------- | -------------------------------- |
+| `Mukund Gupta` | `[Electronics / Coding / App / Mechanics]`      | `Fabrication`  | `Programming, Software `         |
+| `Manan Gupta`  | `[Electronics / App / Fabrication / Mechanics]` | `[Coding]`     | `Material Handling, Hardware`    |
 
 ## 1.3 Project Title
+
 `Project Project`
 
 ## 1.4 One-Line Pitch
-`A virtual and physical obstacle course with a physical vehicle and projected paths which react in real-time to physical movement`
+
+`A projected, fully customizable game world where a real RC car interacts with and reacts to dynamic virtual obstacles in real time.`
 
 ## 1.5 Expanded Project Idea
+
 In 1–2 paragraphs, explain:
+
 - what your project is,
 - what kind of playful experience it creates,
 - what makes it fun, curious, engaging, strange, satisfying, competitive, or delightful,
 - what technologies are involved.
 
 **Response:**  
-`[Write here]`
+`This project is a hybrid play system where a physical RC car interacts with a projection-mapped game. A virtual map is projected on the floor, forming a play area. The car's position and orientation are tracked via an arUko marker, which allows us to place its coordinates virtually and get the projected environment to react to the cars movement.`
 
 ---
 
 # 2. Philosophy Fit
 
 ## 2.1 Experience, Not Social Problem
+
 This module does **not** require your project to solve a large social problem.
 
 You are allowed to build:
+
 - toys,
 - games,
 - interactive objects,
@@ -95,7 +107,9 @@ You are allowed to build:
 - things that are entertaining to use or watch.
 
 ## 2.2 What kind of experience are you creating?
+
 Answer the following:
+
 - What is the experience?
 - What do you want the player or participant to feel?
 - Why would someone want to try it again?
@@ -104,6 +118,7 @@ Answer the following:
 `[Write here]`
 
 ## 2.3 Design Persona
+
 Complete the sentence below:
 
 > We are designing this project as if we are a small creative studio making a **[toy / game / playable object / interactive experience]** for **[children / teens / adults / classmates / exhibition visitors / mixed audience]**.
@@ -115,16 +130,20 @@ Complete the sentence below:
 
 # 3. Inspiration
 
+
+
 ## 3.1 References
+
 List what inspired the project.
 
-| Source Type | Title / Link | What Inspired You |
-|---|---|---|
+| Source Type                                           | Title / Link      | What Inspired You                 |
+| ----------------------------------------------------- | ----------------- | --------------------------------- |
 | `[Toy / Board game / App / Video / Website / Object]` | `[Link or title]` | `[What did you learn or borrow?]` |
 | `[Toy / Board game / App / Video / Website / Object]` | `[Link or title]` | `[What did you learn or borrow?]` |
 | `[Toy / Board game / App / Video / Website / Object]` | `[Link or title]` | `[What did you learn or borrow?]` |
 
 ## 3.2 Original Twist
+
 What makes your project original?
 
 **Response:**  
@@ -135,29 +154,32 @@ What makes your project original?
 # 4. Project Intent
 
 ## 4.1 Core Interaction Loop
+
 Describe the main loop of interaction.
 
 Examples:
+
 - press → launch → score → reset
 - connect → control → observe → repeat
 - turn → trigger → react → repeat
 - move object → sensor detects → sound/light response → player reacts
 
 **Response:**  
-`[Write here]`
+`Player selects mode -> controls car -> car interacts with obstacles -> `
 
 ## 4.2 Intended Player / Audience
 
-| Question | Response |
-|---|---|
-| Who is this for? | `[Write here]` |
-| Age range | `[Write here]` |
-| Solo or multiplayer | `[Write here]` |
-| Expected duration of one round | `[Write here]` |
-| What should the player feel? | `[Write here]` |
+| Question                            | Response       |
+| ----------------------------------- | -------------- |
+| Who is this for?                    | `[Write here]` |
+| Age range                           | `[Write here]` |
+| Solo or multiplayer                 | `[Write here]` |
+| Expected duration of one round      | `[Write here]` |
+| What should the player feel?        | `[Write here]` |
 | Is explanation required before use? | `[Write here]` |
 
 ## 4.3 Player Journey
+
 Describe exactly how a player will use the project.
 
 1. **Approach:** `[How does the player first encounter it?]`
@@ -169,6 +191,7 @@ Describe exactly how a player will use the project.
 7. **Reset:** `[How does the next round begin?]`
 
 ## 4.4 Rules of Play
+
 If your project is a game, list the rules clearly.
 
 - `[Rule 1]`
@@ -181,25 +204,28 @@ If your project is a game, list the rules clearly.
 # 5. Definition of Success
 
 ## 5.1 Definition of “Playable”
+
 Your project will be considered complete only if these conditions are met.
 
-- [ ] `[Condition 1]`
-- [ ] `[Condition 2]`
+- [ ] `Player can control the car remotely`
+- [ ] `Car interacts with the virtual obstacles`
 - [ ] `[Condition 3]`
 - [ ] `[Condition 4]`
 - [ ] `[Condition 5]`
 
 ## 5.2 Minimum Viable Version
+
 What is the smallest version of this project that still delivers the core experience?
 
 **Response:**  
-`[Write here]`
+`User will be able to control the car and move around the projected play area, where the car will stop or react to the obstacles. There would be an end goal to each "level" or mode.`
 
 ## 5.3 Stretch Features
+
 What features are nice to have but not essential?
 
-- `[Stretch feature 1]`
-- `[Stretch feature 2]`
+- `Customizable maps, where players can make the own obstacle course.`
+- `Use camera to track colors, through which the car can interact with real-world objects rather than just virtual.`
 - `[Stretch feature 3]`
 
 ---
@@ -207,25 +233,39 @@ What features are nice to have but not essential?
 # 6. System Overview
 
 ## 6.1 Project Type
+
 Check all that apply.
 
-- [-] Electronics-based
-- [-] Mechanical
-- [-] Sensor-based
-- [-] App-connected
-- [-] Motorized
-- [-] Sound-based
-- [-] Light-based
-- [-] Screen/UI-based
-- [ ] Fabricated structure
-- [-] Game logic based
-- [-] Installation
-- [-] Other: `Wifi connectivity`
+- [x] Electronics-based
+
+- [ ] Mechanical
+
+- [x] Sensor-based
+
+- [x] App-connected
+
+- [x] Motorized
+
+- [ ] Sound-based
+
+- [x] Light-based
+
+- [x] Screen/UI-based
+
+- [x] Fabricated structure
+
+- [x] Game logic based
+
+- [x] Installation
+
+- [x] Other: `Wifi connectivity`
 
 ## 6.2 High-Level System Description
+
 Explain how the system works in simple terms.
 
 Include:
+
 - input,
 - processing,
 - output,
@@ -237,30 +277,34 @@ Include:
 
 ## 6.3 Input / Output Map
 
-| System Part | Type | What It Does |
-|---|---|---|
-| `[Button / Sensor / Switch / App Input]` | Input | `[Describe]` |
-| `[ESP32 / Controller]` | Processing | `[Describe]` |
-| `[LED / Motor / Servo / Buzzer / Display]` | Output | `[Describe]` |
-| `[Mechanical Assembly]` | Physical Action | `[Describe]` |
+| System Part                                | Type            | What It Does |
+| ------------------------------------------ | --------------- | ------------ |
+| `[Button / Sensor / Switch / App Input]`   | Input           | `[Describe]` |
+| `[ESP32 / Controller]`                     | Processing      | `[Describe]` |
+| `[LED / Motor / Servo / Buzzer / Display]` | Output          | `[Describe]` |
+| `[Mechanical Assembly]`                    | Physical Action | `[Describe]` |
 
 ---
 
 # 7. Sketches and Visual Planning
 
 ## 7.1 Concept Sketch
+
 Add an early sketch of the full idea.
 
 **Insert image below:**  
 `[Upload image and link here]`
 
 Example:
+
 ```md
 
 ```
 
 ## 7.2 Labeled Build Sketch
+
 Add a sketch with labels showing:
+
 - structure,
 - electronics placement,
 - user touch points,
@@ -272,11 +316,11 @@ Add a sketch with labels showing:
 
 ## 7.3 Approximate Dimensions
 
-| Dimension | Value |
-|---|---|
-| Length | `[Write here]` |
-| Width | `[Write here]` |
-| Height | `[Write here]` |
+| Dimension        | Value          |
+| ---------------- | -------------- |
+| Length           | `[Write here]` |
+| Width            | `[Write here]` |
+| Height           | `[Write here]` |
 | Estimated weight | `[Write here]` |
 
 ---
@@ -284,6 +328,7 @@ Add a sketch with labels showing:
 # 8. Mechanical Planning
 
 ## 8.1 Mechanical Features
+
 Check all that apply.
 
 - [ ] Gears
@@ -300,13 +345,16 @@ Check all that apply.
 - [ ] Not applicable
 
 ## 8.2 Mechanical Description
+
 Describe the mechanism and what it is meant to do.
 
 **Response:**  
 `[Write here]`
 
 ## 8.3 Motion Planning
+
 If something moves, explain:
+
 - what moves,
 - what causes the movement,
 - how far it moves,
@@ -317,14 +365,16 @@ If something moves, explain:
 `[Write here]`
 
 ## 8.4 Simulation / CAD / Animation Before Making
+
 If your project includes mechanical motion, document the digital planning before fabrication.
 
-| Tool Used | File / Link | What Was Tested |
-|---|---|---|
+| Tool Used                          | File / Link            | What Was Tested            |
+| ---------------------------------- | ---------------------- | -------------------------- |
 | `[Fusion 360 / Tinkercad / other]` | `[Link or screenshot]` | `[What did you validate?]` |
-| `[Tool]` | `[Link or screenshot]` | `[What did you validate?]` |
+| `[Tool]`                           | `[Link or screenshot]` | `[What did you validate?]` |
 
 ## 8.5 Changes After Digital Testing
+
 What changed after the CAD, animation, or simulation stage?
 
 **Response:**  
@@ -336,19 +386,21 @@ What changed after the CAD, animation, or simulation stage?
 
 ## 9.1 Electronics Used
 
-| Component | Quantity | Purpose |
-|---|---:|---|
-| `[ESP32]` | `1` | `[Main controller]` |
-| `[Component]` | `[Qty]` | `[Purpose]` |
-| `[Component]` | `[Qty]` | `[Purpose]` |
+| Component     | Quantity | Purpose             |
+| ------------- | --------:| ------------------- |
+| `[ESP32]`     | `1`      | `[Main controller]` |
+| `[Component]` | `[Qty]`  | `[Purpose]`         |
+| `[Component]` | `[Qty]`  | `[Purpose]`         |
 
 ## 9.2 Wiring Plan
+
 Describe the main electrical connections.
 
 **Response:**  
 `[Write here]`
 
 ## 9.3 Circuit Diagram
+
 Insert a hand-drawn or software-made circuit diagram.
 
 **Insert image below:**  
@@ -356,12 +408,12 @@ Insert a hand-drawn or software-made circuit diagram.
 
 ## 9.4 Power Plan
 
-| Question | Response |
-|---|---|
-| Power source | `[USB / battery / adapter / other]` |
-| Voltage required | `[Write here]` |
-| Current concerns | `[Write here]` |
-| Safety concerns | `[Write here]` |
+| Question         | Response                            |
+| ---------------- | ----------------------------------- |
+| Power source     | `[USB / battery / adapter / other]` |
+| Voltage required | `[Write here]`                      |
+| Current concerns | `[Write here]`                      |
+| Safety concerns  | `[Write here]`                      |
 
 ---
 
@@ -369,15 +421,17 @@ Insert a hand-drawn or software-made circuit diagram.
 
 ## 10.1 Software Tools
 
-| Tool / Platform | Purpose |
-|---|---|
+| Tool / Platform                                                 | Purpose     |
+| --------------------------------------------------------------- | ----------- |
 | `[MicroPython / Arduino / MIT App Inventor / CAD tool / other]` | `[Purpose]` |
-| `[Tool]` | `[Purpose]` |
+| `[Tool]`                                                        | `[Purpose]` |
 
 ## 10.2 Software Logic
+
 Describe what the code must do.
 
 Include:
+
 - startup behavior,
 - input handling,
 - sensor reading,
@@ -390,9 +444,11 @@ Include:
 `[Write here]`
 
 ## 10.3 Code Flowchart
+
 Insert a flowchart showing your code logic.
 
 Suggested sequence:
+
 - start,
 - initialize,
 - wait for input,
@@ -416,15 +472,18 @@ Suggested sequence:
 # 11. MIT App Inventor Plan
 
 ## 11.1 Is an app part of this project?
+
 - [ ] Yes
 - [ ] No
 
 If yes, complete this section.
 
 ## 11.2 Why is the app needed?
+
 Explain what the app adds to the experience.
 
 Examples:
+
 - remote control,
 - score tracking,
 - mode selection,
@@ -437,13 +496,14 @@ Examples:
 
 ## 11.3 App Features
 
-| Feature | Purpose |
-|---|---|
-| `[Bluetooth connect button]` | `[Purpose]` |
-| `[Score display]` | `[Purpose]` |
+| Feature                             | Purpose     |
+| ----------------------------------- | ----------- |
+| `[Bluetooth connect button]`        | `[Purpose]` |
+| `[Score display]`                   | `[Purpose]` |
 | `[Control button / slider / label]` | `[Purpose]` |
 
 ## 11.4 UI Mockup
+
 Insert a sketch or screenshot of the app interface.
 
 **Insert image below:**  
@@ -462,16 +522,18 @@ Insert a sketch or screenshot of the app interface.
 
 ## 12.1 Full BOM
 
-| Item | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec | Why This Choice? |
-|---|---:|---|---|---:|---|---|
-| `[ESP32]` | `1` | `Yes` | `No` | `0` | `[Spec]` | `[Reason]` |
-| `[Item]` | `[Qty]` | `[Yes/No]` | `[Yes/No]` | `[Cost]` | `[Spec]` | `[Reason]` |
-| `[Item]` | `[Qty]` | `[Yes/No]` | `[Yes/No]` | `[Cost]` | `[Spec]` | `[Reason]` |
+| Item      | Quantity | In Kit?    | Need to Buy? | Estimated Cost | Material / Spec | Why This Choice? |
+| --------- | --------:| ---------- | ------------ | --------------:| --------------- | ---------------- |
+| `[ESP32]` | `1`      | `Yes`      | `No`         | `0`            | `[Spec]`        | `[Reason]`       |
+| `[Item]`  | `[Qty]`  | `[Yes/No]` | `[Yes/No]`   | `[Cost]`       | `[Spec]`        | `[Reason]`       |
+| `[Item]`  | `[Qty]`  | `[Yes/No]` | `[Yes/No]`   | `[Cost]`       | `[Spec]`        | `[Reason]`       |
 
 ## 12.2 Material Justification
+
 Explain why you selected your main materials and components.
 
 Examples:
+
 - Why acrylic instead of cardboard?
 - Why MDF instead of 3D print?
 - Why servo instead of DC motor?
@@ -482,23 +544,24 @@ Examples:
 
 ## 12.3 Items to Purchase Separately
 
-| Item | Why Needed | Purchase Link | Latest Safe Date to Procure | Status |
-|---|---|---|---|---|
-| `[Item]` | `[Reason]` | `[Link]` | `[Date]` | `[Pending / Ordered / Received]` |
-| `[Item]` | `[Reason]` | `[Link]` | `[Date]` | `[Pending / Ordered / Received]` |
+| Item     | Why Needed | Purchase Link | Latest Safe Date to Procure | Status                           |
+| -------- | ---------- | ------------- | --------------------------- | -------------------------------- |
+| `[Item]` | `[Reason]` | `[Link]`      | `[Date]`                    | `[Pending / Ordered / Received]` |
+| `[Item]` | `[Reason]` | `[Link]`      | `[Date]`                    | `[Pending / Ordered / Received]` |
 
 ## 12.4 Budget Summary
 
-| Budget Item | Estimated Cost |
-|---|---:|
-| Electronics | `[Cost]` |
-| Mechanical parts | `[Cost]` |
-| Fabrication materials | `[Cost]` |
-| Purchased extras | `[Cost]` |
-| Contingency | `[Cost]` |
-| **Total** | `[Cost]` |
+| Budget Item           | Estimated Cost |
+| --------------------- | --------------:|
+| Electronics           | `[Cost]`       |
+| Mechanical parts      | `[Cost]`       |
+| Fabrication materials | `[Cost]`       |
+| Purchased extras      | `[Cost]`       |
+| Contingency           | `[Cost]`       |
+| **Total**             | `[Cost]`       |
 
 ## 12.5 Budget Reflection
+
 If your cost is too high, what can be simplified, removed, substituted, or shared?
 
 **Response:**  
@@ -509,9 +572,11 @@ If your cost is too high, what can be simplified, removed, substituted, or share
 # 13. Planning the Work
 
 ## 13.1 Team Working Agreement
+
 Write how your team will work together.
 
 Include:
+
 - how tasks are divided,
 - how decisions are made,
 - how progress will be checked,
@@ -523,28 +588,28 @@ Include:
 
 ## 13.2 Task Breakdown
 
-| Task ID | Task | Owner | Estimated Hours | Deadline | Dependency | Status |
-|---|---|---|---:|---|---|---|
-| T1 | `[Finalize concept]` | `[Name]` | `2` | `[Date]` | `None` | `To Do` |
-| T2 | `[Complete BOM]` | `[Name]` | `1` | `[Date]` | `T1` | `To Do` |
-| T3 | `[Test electronics]` | `[Name]` | `2` | `[Date]` | `T1` | `To Do` |
-| T4 | `[Build structure]` | `[Name]` | `4` | `[Date]` | `T1` | `To Do` |
-| T5 | `[Write control code]` | `[Name]` | `4` | `[Date]` | `T3` | `To Do` |
-| T6 | `[Integrate system]` | `[Name]` | `4` | `[Date]` | `T4, T5` | `To Do` |
-| T7 | `[Playtest]` | `[Name]` | `2` | `[Date]` | `T6` | `To Do` |
-| T8 | `[Refine and document]` | `[Name]` | `3` | `[Date]` | `T7` | `To Do` |
+| Task ID | Task                    | Owner    | Estimated Hours | Deadline | Dependency | Status  |
+| ------- | ----------------------- | -------- | ---------------:| -------- | ---------- | ------- |
+| T1      | `[Finalize concept]`    | `[Name]` | `2`             | `[Date]` | `None`     | `To Do` |
+| T2      | `[Complete BOM]`        | `[Name]` | `1`             | `[Date]` | `T1`       | `To Do` |
+| T3      | `[Test electronics]`    | `[Name]` | `2`             | `[Date]` | `T1`       | `To Do` |
+| T4      | `[Build structure]`     | `[Name]` | `4`             | `[Date]` | `T1`       | `To Do` |
+| T5      | `[Write control code]`  | `[Name]` | `4`             | `[Date]` | `T3`       | `To Do` |
+| T6      | `[Integrate system]`    | `[Name]` | `4`             | `[Date]` | `T4, T5`   | `To Do` |
+| T7      | `[Playtest]`            | `[Name]` | `2`             | `[Date]` | `T6`       | `To Do` |
+| T8      | `[Refine and document]` | `[Name]` | `3`             | `[Date]` | `T7`       | `To Do` |
 
 ## 13.3 Responsibility Split
 
-| Area | Main Owner | Support Owner |
-|---|---|---|
-| Concept and gameplay | `[Name]` | `[Name]` |
-| Electronics | `[Name]` | `[Name]` |
-| Coding | `[Name]` | `[Name]` |
-| App | `[Name]` | `[Name]` |
-| Mechanical build | `[Name]` | `[Name]` |
-| Testing | `[Name]` | `[Name]` |
-| Documentation | `[Name]` | `[Name]` |
+| Area                 | Main Owner | Support Owner |
+| -------------------- | ---------- | ------------- |
+| Concept and gameplay | `[Name]`   | `[Name]`      |
+| Electronics          | `[Name]`   | `[Name]`      |
+| Coding               | `[Name]`   | `[Name]`      |
+| App                  | `[Name]`   | `[Name]`      |
+| Mechanical build     | `[Name]`   | `[Name]`      |
+| Testing              | `[Name]`   | `[Name]`      |
+| Documentation        | `[Name]`   | `[Name]`      |
 
 ---
 
@@ -553,7 +618,9 @@ Include:
 ## 14.1 Four-Week Plan
 
 ### Week 1 — Plan and De-risk
+
 Expected outcomes:
+
 - [ ] Idea finalized
 - [ ] Core interaction decided
 - [ ] Sketches made
@@ -563,7 +630,9 @@ Expected outcomes:
 - [ ] Basic feasibility tested
 
 ### Week 2 — Build Subsystems
+
 Expected outcomes:
+
 - [ ] Electronics tests completed
 - [ ] CAD / structure planning completed
 - [ ] App UI started if needed
@@ -571,7 +640,9 @@ Expected outcomes:
 - [ ] Main subsystems partially working
 
 ### Week 3 — Integrate
+
 Expected outcomes:
+
 - [ ] Physical body built
 - [ ] Electronics integrated
 - [ ] Code connected to hardware
@@ -579,7 +650,9 @@ Expected outcomes:
 - [ ] First playable version exists
 
 ### Week 4 — Refine and Finish
+
 Expected outcomes:
+
 - [ ] Technical bugs reduced
 - [ ] Playtesting completed
 - [ ] Improvements made
@@ -588,12 +661,12 @@ Expected outcomes:
 
 ## 14.2 Weekly Update Log
 
-| Week | Planned Goal | What Actually Happened | What Changed | Next Steps |
-|---|---|---|---|---|
-| Week 1 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
-| Week 2 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
-| Week 3 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
-| Week 4 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
+| Week   | Planned Goal   | What Actually Happened | What Changed   | Next Steps     |
+| ------ | -------------- | ---------------------- | -------------- | -------------- |
+| Week 1 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
+| Week 2 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
+| Week 3 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
+| Week 4 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
 
 ---
 
@@ -601,14 +674,15 @@ Expected outcomes:
 
 ## 15.1 Risk Register
 
-| Risk | Type | Likelihood | Impact | Mitigation Plan | Owner |
-|---|---|---|---|---|---|
-| `[Example: Bluetooth disconnects]` | `Technical` | `Medium` | `High` | `[Fallback interaction / simplify connection flow]` | `[Name]` |
-| `[Example: Structure breaks during play]` | `Mechanical` | `Medium` | `High` | `[Reinforce joints / change material]` | `[Name]` |
-| `[Risk]` | `[Technical / Material / Time / Gameplay]` | `[Low/Medium/High]` | `[Low/Medium/High]` | `[Plan]` | `[Name]` |
-| `[Risk]` | `[Type]` | `[Low/Medium/High]` | `[Low/Medium/High]` | `[Plan]` | `[Name]` |
+| Risk                                      | Type                                       | Likelihood          | Impact              | Mitigation Plan                                     | Owner    |
+| ----------------------------------------- | ------------------------------------------ | ------------------- | ------------------- | --------------------------------------------------- | -------- |
+| `[Example: Bluetooth disconnects]`        | `Technical`                                | `Medium`            | `High`              | `[Fallback interaction / simplify connection flow]` | `[Name]` |
+| `[Example: Structure breaks during play]` | `Mechanical`                               | `Medium`            | `High`              | `[Reinforce joints / change material]`              | `[Name]` |
+| `[Risk]`                                  | `[Technical / Material / Time / Gameplay]` | `[Low/Medium/High]` | `[Low/Medium/High]` | `[Plan]`                                            | `[Name]` |
+| `[Risk]`                                  | `[Type]`                                   | `[Low/Medium/High]` | `[Low/Medium/High]` | `[Plan]`                                            | `[Name]` |
 
 ## 15.2 Biggest Unknown Right Now
+
 What is the single biggest uncertainty in your project at this stage?
 
 **Response:**  
@@ -620,45 +694,47 @@ What is the single biggest uncertainty in your project at this stage?
 
 ## 16.1 Technical Testing Plan
 
-| What Needs Testing | How You Will Test It | Success Condition |
-|---|---|---|
-| `[Bluetooth connection]` | `[Method]` | `[What counts as success?]` |
-| `[Mechanism movement]` | `[Method]` | `[What counts as success?]` |
-| `[Sensor behavior]` | `[Method]` | `[What counts as success?]` |
-| `[App communication]` | `[Method]` | `[What counts as success?]` |
+| What Needs Testing       | How You Will Test It | Success Condition           |
+| ------------------------ | -------------------- | --------------------------- |
+| `[Bluetooth connection]` | `[Method]`           | `[What counts as success?]` |
+| `[Mechanism movement]`   | `[Method]`           | `[What counts as success?]` |
+| `[Sensor behavior]`      | `[Method]`           | `[What counts as success?]` |
+| `[App communication]`    | `[Method]`           | `[What counts as success?]` |
 
 ## 16.2 Playtesting Plan
 
-| Question | How You Will Check |
-|---|---|
-| Do players understand what to do? | `[Method]` |
-| Is the interaction satisfying? | `[Method]` |
-| Do players want another turn? | `[Method]` |
-| Is the challenge balanced? | `[Method]` |
-| Is the response clear and immediate? | `[Method]` |
+| Question                             | How You Will Check |
+| ------------------------------------ | ------------------ |
+| Do players understand what to do?    | `[Method]`         |
+| Is the interaction satisfying?       | `[Method]`         |
+| Do players want another turn?        | `[Method]`         |
+| Is the challenge balanced?           | `[Method]`         |
+| Is the response clear and immediate? | `[Method]`         |
 
 ## 16.3 Testing and Debugging Log
 
-| Date | Problem Found | Type | What You Tried | Result | Next Action |
-|---|---|---|---|---|---|
+| Date     | Problem Found      | Type                                       | What You Tried   | Result                       | Next Action   |
+| -------- | ------------------ | ------------------------------------------ | ---------------- | ---------------------------- | ------------- |
 | `[Date]` | `[Describe issue]` | `[Technical / Mechanical / UI / Gameplay]` | `[What you did]` | `[Worked / Partly / Failed]` | `[Next step]` |
-| `[Date]` | `[Describe issue]` | `[Type]` | `[What you did]` | `[Result]` | `[Next step]` |
+| `[Date]` | `[Describe issue]` | `[Type]`                                   | `[What you did]` | `[Result]`                   | `[Next step]` |
 
 ## 16.4 Playtesting Notes
 
-| Tester | What They Did | What Confused Them | What They Enjoyed | What You Will Change |
-|---|---|---|---|---|
-| `[Peer / friend / classmate]` | `[Observation]` | `[Observation]` | `[Observation]` | `[Action]` |
-| `[Peer / friend / classmate]` | `[Observation]` | `[Observation]` | `[Observation]` | `[Action]` |
+| Tester                        | What They Did   | What Confused Them | What They Enjoyed | What You Will Change |
+| ----------------------------- | --------------- | ------------------ | ----------------- | -------------------- |
+| `[Peer / friend / classmate]` | `[Observation]` | `[Observation]`    | `[Observation]`   | `[Action]`           |
+| `[Peer / friend / classmate]` | `[Observation]` | `[Observation]`    | `[Observation]`   | `[Action]`           |
 
 ---
 
 # 17. Build Documentation
 
 ## 17.1 Fabrication Process
+
 Describe how the project was physically made.
 
 Include:
+
 - cutting,
 - 3D printing,
 - assembly,
@@ -671,9 +747,11 @@ Include:
 `[Write here]`
 
 ## 17.2 Build Photos
+
 Add photos throughout the project.
 
 Suggested images:
+
 - early sketch,
 - prototype,
 - electronics testing,
@@ -682,6 +760,7 @@ Suggested images:
 - final build.
 
 Example:
+
 ```md
 
 
@@ -690,33 +769,37 @@ Example:
 
 ## 17.3 Version History
 
-| Version | Date | What Changed | Why |
-|---|---|---|---|
-| `v1` | `[Date]` | `[Describe]` | `[Reason]` |
-| `v2` | `[Date]` | `[Describe]` | `[Reason]` |
-| `v3` | `[Date]` | `[Describe]` | `[Reason]` |
+| Version | Date     | What Changed | Why        |
+| ------- | -------- | ------------ | ---------- |
+| `v1`    | `[Date]` | `[Describe]` | `[Reason]` |
+| `v2`    | `[Date]` | `[Describe]` | `[Reason]` |
+| `v3`    | `[Date]` | `[Describe]` | `[Reason]` |
 
 ---
 
 # 18. Final Outcome
 
 ## 18.1 Final Description
+
 Describe the final version of your project.
 
 **Response:**  
 `[Write here]`
 
 ## 18.2 What Works Well
+
 - `[Point 1]`
 - `[Point 2]`
 - `[Point 3]`
 
 ## 18.3 What Still Needs Improvement
+
 - `[Point 1]`
 - `[Point 2]`
 - `[Point 3]`
 
 ## 18.4 What Changed From the Original Plan
+
 How did the project change from the initial idea?
 
 **Response:**  
@@ -727,6 +810,7 @@ How did the project change from the initial idea?
 # 19. Reflection
 
 ## 19.1 Team Reflection
+
 What did your team do well?  
 What slowed you down?  
 How well did you manage time, tasks, and responsibilities?
@@ -735,7 +819,9 @@ How well did you manage time, tasks, and responsibilities?
 `[Write here]`
 
 ## 19.2 Technical Reflection
+
 What did you learn about:
+
 - electronics,
 - coding,
 - mechanisms,
@@ -746,7 +832,9 @@ What did you learn about:
 `[Write here]`
 
 ## 19.3 Design Reflection
+
 What did you learn about:
+
 - designing for play,
 - delight,
 - clarity,
@@ -758,6 +846,7 @@ What did you learn about:
 `[Write here]`
 
 ## 19.4 If You Had One More Week
+
 What would you improve next?
 
 **Response:**  
@@ -768,6 +857,7 @@ What would you improve next?
 # 20. Final Submission Checklist
 
 Before submission, confirm that:
+
 - [ ] Team details are complete
 - [ ] Project description is complete
 - [ ] Inspiration sources are included
@@ -818,6 +908,7 @@ project-repo/
 # 22. Instructor Review
 
 ## 22.1 Proposal Approval
+
 - [ ] Approved to proceed
 - [ ] Approved with changes
 - [ ] Rework required before proceeding
@@ -826,7 +917,11 @@ project-repo/
 `[Instructor fills this section]`
 
 ## 22.2 Midpoint Review
+
 `[Instructor fills this section]`
 
 ## 22.3 Final Review Notes
+
 `[Instructor fills this section]`
+
+
