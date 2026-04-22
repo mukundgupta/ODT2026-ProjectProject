@@ -69,7 +69,7 @@ By the final review, this README should clearly show:
 
 ## 1.3 Project Title
 
-`Project Project"`
+`"Project Project"`
 
 `(because Project-or)`
 
