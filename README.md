@@ -180,10 +180,10 @@ Examples:
 
 | Question                            | Response                                                                                         |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------ |
-| Who is this for?                    | `[Write here]`                                                                                   |
-| Age range                           | `[Write here]`                                                                                   |
+| Who is this for?                    | `No specific demographic, anyone who is interested`                                              |
+| Age range                           | ``10+ (but intuitive enough for younger children to play)`                                       |
 | Solo or multiplayer                 | `Currently Solo, can be expanded`                                                                |
-| Expected duration of one round      | `~five minutes`                                                                                  |
+| Expected duration of one round      | `~three minutes`                                                                                 |
 | What should the player feel?        | `Curious, engaged, slightly challenged, and in control of a “real object inside a digital game”` |
 | Is explanation required before use? | `minimial (move car to goal, avoid obstacles)`                                                   |
 
@@ -424,7 +424,7 @@ If your project includes mechanical motion, document the digital planning before
 What changed after the CAD, animation, or simulation stage?
 
 **Response:**  
-`[Write here]`
+`Updated the size of structure for all components to fit inside the structure. Updated the "lid" design to properly fit. `
 
 ---
 
@@ -432,22 +432,26 @@ What changed after the CAD, animation, or simulation stage?
 
 ## 9.1 Electronics Used
 
-| Component                                          | Quantity | Purpose               |
-| -------------------------------------------------- | --------:| --------------------- |
-| `[ESP32]`                                          | `1`      | `[Main controller]`   |
-| `[L298N Motor Driver]` | `1`      | `[Control Motors]`    |
-| `[BO Motors]`                                      | `2`      | `[Rotate wheels]`     |
-| `[Buck Converter]`                                 | `1`      | `[Power ESP32]`       |
-| `[Li Ion Battery Pack]`                            | `2`      | `[Power]`             |
-| `[Projector]`                                      | `1`      | `[Display obstacles]` |
-|                                                    |          |                       |
+| Component                 | Quantity | Purpose                               |
+| ------------------------- | --------:| ------------------------------------- |
+| `[ESP32]`                 | `1`      | `[Main controller]`                   |
+| `[L298N Motor Driver]`    | `1`      | `[Control Motors]`                    |
+| `[BO Motors]`             | `2`      | `[Rotate wheels]`                     |
+| `[Buck Converter]`        | `1`      | `[Power ESP32]`                       |
+| `[Li Ion Battery Pack]`   | `2`      | `[Power]`                             |
+| `[Projector]`             | `1`      | `[Display obstacles]`                 |
+| `Camera (Webcam / Phone)` | `1`      | `[Tracks car position using markers]` |
 
 ## 9.2 Wiring Plan
 
 Describe the main electrical connections.
 
 **Response:**  
-`[Write here]`
+`The ESP32 is connected to the motor driver (L298N) using four GPIO pins (18,19; 22,23) to control motor direction (IN1, IN2, IN3, IN4). Two PWM-capable pins (ENA and ENB; 25 and 26) are connected to control the speed of each motor.
+
+The motors are connected to the output terminals of the motor driver. The motor driver is powered directly by the battery pack (higher voltage), while the ESP32 receives regulated 5V from the buck converter.
+
+All components share a common ground to ensure stable operation. The projector and camera are connected to the laptop, which handles tracking and game logic separately.`
 
 ## 9.3 Circuit Diagram
 
@@ -458,12 +462,12 @@ Insert a hand-drawn or software-made circuit diagram.
 
 ## 9.4 Power Plan
 
-| Question         | Response                            |
-| ---------------- | ----------------------------------- |
-| Power source     | `[USB / battery / adapter / other]` |
-| Voltage required | `[Write here]`                      |
-| Current concerns | `[Write here]`                      |
-| Safety concerns  | `[Write here]`                      |
+| Question         | Response                                                                                                                                          |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Power source     | `Battery (Li-ion pack)`                                                                                                                           |
+| Voltage required | `~6–8.4V for motors (via driver), stepped down to 5V for ESP32 (buck converter)`                                                                  |
+| Current concerns | `Motors can draw high current under load, which may cause voltage drops affecting ESP32 and WiFi stability`                                       |
+| Safety concerns  | `Avoid over-discharging Li-ion batteries, ensure proper voltage regulation, prevent short circuits, and secure wiring to avoid loose connections` |
 
 ---
 
@@ -493,7 +497,22 @@ Include:
 - reset behavior.
 
 **Response:**  
-`[Write here]`
+`
+
+* **Startup behavior:**  
+  The ESP32 initializes motor pins, PWM control, and starts a WiFi access point with a web server. The laptop initializes camera input, tracking system, and projection mapping.
+* **Input handling:**  
+  Movement commands are received from the laptop (pygame sends http requests)
+* **Sensor reading:**  
+  The camera continuously captures frames, and OpenCV detects ArUco markers to determine the car’s position and orientation.
+* **Decision logic:**  
+  The system maps the car’s position into a virtual coordinate system and checks for nearby obstacles or collisions. If movement is valid, the command is allowed; if not, it is blocked or replaced with a feedback action (like a slight shake).
+* **Output behavior:**  
+  The ESP32 drives the motors using PWM signals to control speed and direction. The projector displays the updated game environment, including obstacles, targets, and feedback visuals.
+* **Communication logic:**  
+  The laptop sends HTTP requests (e.g., `/forward`, `/left`) to the ESP32 over WiFi. The ESP32 parses these commands and executes motor actions.
+* **Reset behavior:**  
+  If no command is received within a short timeout, the ESP32 stops the motors. The game resets when a level is completed or restarted.`
 
 ## 10.3 Code Flowchart
 
@@ -516,7 +535,47 @@ Suggested sequence:
 ## 10.4 Pseudocode
 
 ```text
-[Write your pseudocode here]
+START
+
+INITIALIZE ESP32
+INITIALIZE CAMERA + TRACKING
+INITIALIZE PROJECTION SYSTEM
+
+LOOP:
+
+    CAPTURE camera frame
+    DETECT ArUco markers
+
+    IF corner markers detected:
+        CALCULATE homography (camera → game space)
+
+    IF car marker detected:
+        MAP car position to game space
+        SMOOTH position
+
+    READ user input (button / control command)
+
+    CHECK if movement direction is valid:
+        IF obstacle nearby:
+            BLOCK movement
+            SEND "shake" or stop command
+        ELSE:
+            SEND movement command to ESP32
+
+    ESP32 RECEIVES command:
+        SET motor direction
+        APPLY PWM speed
+
+    UPDATE projected visuals:
+        DRAW car, obstacles, feedback
+
+    IF level goal reached:
+        LOAD next level or reset
+
+    IF no input for timeout:
+        STOP motors
+
+REPEAT
 ```
 
 ---
@@ -526,7 +585,7 @@ Suggested sequence:
 ## 11.1 Is an app part of this project?
 
 - [ ] Yes
-- [ ] No
+- [x] No
 
 If yes, complete this section.
 
@@ -574,11 +633,13 @@ Insert a sketch or screenshot of the app interface.
 
 ## 12.1 Full BOM
 
-| Item             | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec | Why This Choice? |
-| ---------------- | --------:| ------- | ------------ | --------------:| --------------- | ---------------- |
-| `[ESP32]`        | `1`      | `Yes`   | `No`         | `0`            | `[Spec]`        | `[Reason]`       |
-| `[LN296 Driver]` | `[1]`    | `[Yes]` | `[No]`       | `0`            | `[Spec]`        | `[Reason]`       |
-| `[BO Motors]`    | `[2]`    | `[No]`  | `[Yes]`      | `[Cost]`       | `[Spec]`        | `[Reason]`       |
+| Item                             | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec | Why This Choice? |
+| -------------------------------- | --------:| ------- | ------------ | --------------:| --------------- | ---------------- |
+| `[ESP32]`                        | `1`      | `Yes`   | `No`         | `0`            | `[Spec]`        | `[Reason]`       |
+| `[LN296 Driver]`                 | `[1]`    | `[Yes]` | `[No]`       | `0`            | `[Spec]`        | `[Reason]`       |
+| `[BO Motors]`                    | `[2]`    | `[No]`  | `[Yes]`      | `[150]`        | `[Spec]`        | `[Reason]`       |
+| `[Buck Converter]`               | `[1]`    | `[No]`  | `[Yes]`      | `[75]`         |                 |                  |
+| `[Li-ion batteries with holder]` | `[1]`    | `[No]`  | `[Yes]`      | `[200]`        |                 |                  |
 
 ## 12.2 Material Justification
 
@@ -592,7 +653,11 @@ Examples:
 - Why bearing instead of a plain shaft hole?
 
 **Response:**  
-`[Write here]`
+`MDF was used for laser cutting instead of 3D printing due to time constraints, as laser cutting allows rapid prototyping and quick iteration of designs. It also provides sufficient structural rigidity for the chassis while being easy to modify if needed.`
+
+`DC motors (BO motors) were chosen instead of servos or steppers because the system requires continuous rotation for movement rather than precise angular control (Previously, we were considering using steppers as we were planning on tracking movement on the ESP using its relative position from an origin, but since we're using a camera now, this is not required). A motor driver (L298N) was used to allow bidirectional control and speed variation using PWM.`
+
+`A simple low-friction support (instead of a complex caster wheel mechanism) was used to reduce fabrication complexity while still maintaining stability for short-term use during the exhibition.`
 
 ## 12.3 Items to Purchase Separately
 
@@ -603,14 +668,14 @@ Examples:
 
 ## 12.4 Budget Summary
 
-| Budget Item           | Estimated Cost |
-| --------------------- | --------------:|
-| Electronics           | `[Cost]`       |
-| Mechanical parts      | `[Cost]`       |
-| Fabrication materials | `[Cost]`       |
-| Purchased extras      | `[Cost]`       |
-| Contingency           | `[Cost]`       |
-| **Total**             | `[Cost]`       |
+| Budget Item           | Estimated Cost              |
+| --------------------- | ---------------------------:|
+| Electronics           | `[500]`                     |
+| Mechanical parts      | `[200]`                     |
+| Fabrication materials | `[0 (Available on campus)]` |
+| Purchased extras      | `[Cost]`                    |
+| Contingency           | `[Cost]`                    |
+| **Total**             | `[Cost]`                    |
 
 ## 12.5 Budget Reflection
 
@@ -638,6 +703,8 @@ Include:
 **Response:**  
 `[Write here]`
 
+
+
 ## 13.2 Task Breakdown
 
 | Task ID | Task                    | Owner    | Estimated Hours | Deadline | Dependency | Status  |
@@ -655,13 +722,13 @@ Include:
 
 | Area                 | Main Owner | Support Owner |
 | -------------------- | ---------- | ------------- |
-| Concept and gameplay | `[Name]`   | `[Name]`      |
-| Electronics          | `[Name]`   | `[Name]`      |
-| Coding               | `[Name]`   | `[Name]`      |
-| App                  | `[Name]`   | `[Name]`      |
-| Mechanical build     | `[Name]`   | `[Name]`      |
-| Testing              | `[Name]`   | `[Name]`      |
-| Documentation        | `[Name]`   | `[Name]`      |
+| Concept and gameplay | `[Mukund]` | `[Manan]`     |
+| Electronics          | `[Mukund]` | `[Manan]`     |
+| Coding               | `[Mukund]` | `[Manan]`     |
+| App                  | `[NA]`     | `[NA]`        |
+| Mechanical build     | `[Manan]`  | `[Mukund]`    |
+| Testing              | `[Manan]`  | `[Mukund]`    |
+| Documentation        | `[Manan]`  | `[Mukund]`    |
 
 ---
 
@@ -673,43 +740,43 @@ Include:
 
 Expected outcomes:
 
-- [ ] Idea finalized
-- [ ] Core interaction decided
-- [ ] Sketches made
-- [ ] BOM completed
-- [ ] Purchase needs identified
+- [x] Idea finalized
+- [x] Core interaction decided
+- [x] Sketches made
+- [x] BOM completed
+- [x] Purchase needs identified
 - [ ] Key uncertainty identified
-- [ ] Basic feasibility tested
+- [x] Basic feasibility tested
 
 ### Week 2 — Build Subsystems
 
 Expected outcomes:
 
-- [ ] Electronics tests completed
+- [x] Electronics tests completed
 - [ ] CAD / structure planning completed
 - [ ] App UI started if needed
-- [ ] Mechanical concept tested
-- [ ] Main subsystems partially working
+- [x] Mechanical concept tested
+- [x] Main subsystems partially working
 
 ### Week 3 — Integrate
 
 Expected outcomes:
 
-- [ ] Physical body built
-- [ ] Electronics integrated
-- [ ] Code connected to hardware
+- [x] Physical body built
+- [x] Electronics integrated
+- [x] Code connected to hardware
 - [ ] App connected if required
-- [ ] First playable version exists
+- [x] First playable version exists
 
 ### Week 4 — Refine and Finish
 
 Expected outcomes:
 
-- [ ] Technical bugs reduced
-- [ ] Playtesting completed
-- [ ] Improvements made
-- [ ] Documentation completed
-- [ ] Final build ready
+- [x] Technical bugs reduced
+- [x] Playtesting completed
+- [x] Improvements made
+- [x] Documentation completed
+- [x] Final build ready
 
 ## 14.2 Weekly Update Log
 
@@ -726,19 +793,20 @@ Expected outcomes:
 
 ## 15.1 Risk Register
 
-| Risk                                      | Type                                       | Likelihood          | Impact              | Mitigation Plan                                     | Owner    |
-| ----------------------------------------- | ------------------------------------------ | ------------------- | ------------------- | --------------------------------------------------- | -------- |
-| `[Example: Bluetooth disconnects]`        | `Technical`                                | `Medium`            | `High`              | `[Fallback interaction / simplify connection flow]` | `[Name]` |
-| `[Example: Structure breaks during play]` | `Mechanical`                               | `Medium`            | `High`              | `[Reinforce joints / change material]`              | `[Name]` |
-| `[Risk]`                                  | `[Technical / Material / Time / Gameplay]` | `[Low/Medium/High]` | `[Low/Medium/High]` | `[Plan]`                                            | `[Name]` |
-| `[Risk]`                                  | `[Type]`                                   | `[Low/Medium/High]` | `[Low/Medium/High]` | `[Plan]`                                            | `[Name]` |
+| Risk                                                            | Type         | Likelihood | Impact   | Mitigation Plan                                                                        | Owner    |
+| --------------------------------------------------------------- | ------------ | ---------- | -------- | -------------------------------------------------------------------------------------- | -------- |
+| WiFi connection between laptop and ESP32 becomes unstable       | `Technical`  | `Medium`   | `High`   | `Keep ESP32 close, ensure stable power supply, reduce network load, add fail-safe stop | `[Name]` |
+| Camera tracking becomes jittery or loses marker during movement | `Technical`  | `High`     | `Medium` | Improve lighting, tune camera settings, add smoothing and limit speed                  | `[Name]` |
+| Car drifts due to uneven motor speeds or friction               | `Mechanical` | `High`     | `Medium` | Calibrate motor speeds, reduce friction (better caster), adjust PWM values             | `[Name]` |
+| Projection misalignment with physical space`                    | `Technical`  | `Medium`   | `High`   | Manual calibration using draggable points before gameplay                              | `[Name]` |
+| Power fluctuations from battery affecting motors/WiFi           | `Electrical` | `Medium`   | `High`   | Use stable voltage via buck converter, ensure batteries are charged                    |          |
 
 ## 15.2 Biggest Unknown Right Now
 
 What is the single biggest uncertainty in your project at this stage?
 
 **Response:**  
-`[Write here]`
+`The biggest uncertainty is maintaining reliable real-time tracking while the car is moving at higher speeds. While tracking works well when the car is stationary, motion introduces jitter and occasional loss of detection, which directly affects gameplay responsiveness and accuracy.`
 
 ---
 
@@ -747,11 +815,11 @@ What is the single biggest uncertainty in your project at this stage?
 ## 16.1 Technical Testing Plan
 
 | What Needs Testing       | How You Will Test It | Success Condition           |
-| ------------------------ | -------------------- | --------------------------- |
-| `[Bluetooth connection]` | `[Method]`           | `[What counts as success?]` |
-| `[Mechanism movement]`   | `[Method]`           | `[What counts as success?]` |
-| `[Sensor behavior]`      | `[Method]`           | `[What counts as success?]` |
-| `[App communication]`    | `[Method]`           | `[What counts as success?]` |
+| ------------------------ | ------------------------------------------------ | --------------------------- |
+| `[Bluetooth connection]` | `[Method]`                                       | `[What counts as success?]` |
+| `[Mechanism movement]`   | `[Method]`                                       | `[What counts as success?]` |
+| `[Sensor behavior]`      | `[Method]`                                       | `[What counts as success?]` |
+| `[App communication]`    | `[Method]`                                       | `[What counts as success?]` |
 
 ## 16.2 Playtesting Plan
 
