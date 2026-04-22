@@ -85,7 +85,8 @@ In 1–2 paragraphs, explain:
 - what technologies are involved.
 
 **Response:**  
-`This project is a hybrid play system where a physical RC car interacts with a projection-mapped game. A virtual map is projected on the floor, forming a play area. The car's position and orientation are tracked via an arUko marker, which allows us to place its coordinates virtually and get the projected environment to react to the cars movement.`
+`This project is a hybrid play system where a physical RC car interacts with a projection-mapped game. A virtual map is projected on the floor, forming a play area. The car's position and orientation are tracked via an arUko marker, which allows us to place its coordinates virtually and get the projected environment to react to the cars movement.
+This can be expanded to have levels and form a customizable experience.`
 
 ---
 
@@ -115,7 +116,11 @@ Answer the following:
 - Why would someone want to try it again?
 
 **Response:**  
-`[Write here]`
+`This is a playful mixed-reality experience where a physical RC car interacts with a projected virtual world. The player moves the car in real space, while the system tracks its position and responds through dynamic visuals like obstacles, paths, and game objectives.
+
+The experience is meant to feel responsive, slightly unpredictable, and engaging, like controlling a real object inside a digital game. Players feel a sense of control, curiosity, and challenge as they navigate through levels. The combination of physical movement and virtual feedback makes it satisfying to experiment with.
+
+Someone would want to try it again because the projected environment can change: new layouts, rules, and mechanics can be introduced easily, making each playthrough feel different.`
 
 ## 2.3 Design Persona
 
@@ -124,7 +129,7 @@ Complete the sentence below:
 > We are designing this project as if we are a small creative studio making a **[toy / game / playable object / interactive experience]** for **[children / teens / adults / classmates / exhibition visitors / mixed audience]**.
 
 **Response:**  
-`[Write here]`
+`We are designing this project as if we are a small creative studio making a playable interactive experience for exhibition visitors and classmates.`
 
 ---
 
