@@ -165,7 +165,7 @@ Examples:
 - move object → sensor detects → sound/light response → player reacts
 
 **Response:**  
-`Player selects mode -> controls car -> car interacts with obstacles -> `
+`track car → map position → check obstacles → send movement → car moves → system reacts → repeat`
 
 ## 4.2 Intended Player / Audience
 
@@ -207,8 +207,8 @@ If your project is a game, list the rules clearly.
 
 Your project will be considered complete only if these conditions are met.
 
-- [ ] `Player can control the car remotely`
-- [ ] `Car interacts with the virtual obstacles`
+- [x] `Player can control the car remotely`
+- [x] `Car interacts with the virtual obstacles`
 - [ ] `[Condition 3]`
 - [ ] `[Condition 4]`
 - [ ] `[Condition 5]`
@@ -258,7 +258,7 @@ Check all that apply.
 
 - [x] Installation
 
-- [x] Other: `Wifi connectivity`
+- [ ] Other: 
 
 ## 6.2 High-Level System Description
 
@@ -339,7 +339,7 @@ Check all that apply.
 - [ ] Shafts
 - [ ] Springs
 - [ ] Bearings
-- [ ] Wheels
+- [x] Wheels
 - [ ] Sliders
 - [ ] Levers
 - [ ] Not applicable
@@ -386,11 +386,15 @@ What changed after the CAD, animation, or simulation stage?
 
 ## 9.1 Electronics Used
 
-| Component     | Quantity | Purpose             |
-| ------------- | --------:| ------------------- |
-| `[ESP32]`     | `1`      | `[Main controller]` |
-| `[Component]` | `[Qty]`  | `[Purpose]`         |
-| `[Component]` | `[Qty]`  | `[Purpose]`         |
+| Component               | Quantity | Purpose               |
+| ----------------------- | --------:| --------------------- |
+| `[ESP32]`               | `1`      | `[Main controller]`   |
+| `[LN296 Motor Driver]`  | `1`      | `[Control Motors]`    |
+| `[BO Motors]`           | `2`      | `[Rotate wheels]`     |
+| `[Buck Converter]`      | `1`      | `[Power ESP32]`       |
+| `[Li Ion Battery Pack]` | `2`      | `[Power]`             |
+| `[Projector]`           | `1`      | `[Display obstacles]` |
+|                         |          |                       |
 
 ## 9.2 Wiring Plan
 
@@ -421,10 +425,12 @@ Insert a hand-drawn or software-made circuit diagram.
 
 ## 10.1 Software Tools
 
-| Tool / Platform                                                 | Purpose     |
-| --------------------------------------------------------------- | ----------- |
-| `[MicroPython / Arduino / MIT App Inventor / CAD tool / other]` | `[Purpose]` |
-| `[Tool]`                                                        | `[Purpose]` |
+| Tool / Platform                | Purpose                   |
+| ------------------------------ | ------------------------- |
+| `[MicroPython]`                | `[Purpose]`               |
+| `[Python/PyGame/OpenCV]`       | `[Purpose]`               |
+| `[Fusion/Blender/Illustrator]` | `[Prototyping structure]` |
+|                                |                           |
 
 ## 10.2 Software Logic
 
@@ -522,11 +528,11 @@ Insert a sketch or screenshot of the app interface.
 
 ## 12.1 Full BOM
 
-| Item      | Quantity | In Kit?    | Need to Buy? | Estimated Cost | Material / Spec | Why This Choice? |
-| --------- | --------:| ---------- | ------------ | --------------:| --------------- | ---------------- |
-| `[ESP32]` | `1`      | `Yes`      | `No`         | `0`            | `[Spec]`        | `[Reason]`       |
-| `[Item]`  | `[Qty]`  | `[Yes/No]` | `[Yes/No]`   | `[Cost]`       | `[Spec]`        | `[Reason]`       |
-| `[Item]`  | `[Qty]`  | `[Yes/No]` | `[Yes/No]`   | `[Cost]`       | `[Spec]`        | `[Reason]`       |
+| Item             | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec | Why This Choice? |
+| ---------------- | --------:| ------- | ------------ | --------------:| --------------- | ---------------- |
+| `[ESP32]`        | `1`      | `Yes`   | `No`         | `0`            | `[Spec]`        | `[Reason]`       |
+| `[LN296 Driver]` | `[1]`    | `[Yes]` | `[No]`       | `0`            | `[Spec]`        | `[Reason]`       |
+| `[BO Motors]`    | `[2]`    | `[No]`  | `[Yes]`      | `[Cost]`       | `[Spec]`        | `[Reason]`       |
 
 ## 12.2 Material Justification
 
@@ -858,7 +864,7 @@ What would you improve next?
 
 Before submission, confirm that:
 
-- [ ] Team details are complete
+- [x] Team details are complete
 - [ ] Project description is complete
 - [ ] Inspiration sources are included
 - [ ] Player journey is written
@@ -923,5 +929,3 @@ project-repo/
 ## 22.3 Final Review Notes
 
 `[Instructor fills this section]`
-
-
