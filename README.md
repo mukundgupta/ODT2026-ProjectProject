@@ -661,28 +661,29 @@ Examples:
 
 ## 12.3 Items to Purchase Separately
 
-| Item     | Why Needed | Purchase Link | Latest Safe Date to Procure | Status                           |
-| -------- | ---------- | ------------- | --------------------------- | -------------------------------- |
-| `[Item]` | `[Reason]` | `[Link]`      | `[Date]`                    | `[Pending / Ordered / Received]` |
-| `[Item]` | `[Reason]` | `[Link]`      | `[Date]`                    | `[Pending / Ordered / Received]` |
+| Item                 | Why Needed               | Purchase Link | Latest Safe Date to Procure | Status       |
+| -------------------- | ------------------------ | ------------- | --------------------------- | ------------ |
+| `BO Motors + Wheels` | `Drive system for car`   | `robu.in`     | `15th April`                | `[Received]` |
+| `Buck Converter`     | `Stable power for ESP32` | `local store` | `before testing`            | `[Received]` |
+| `Li-ion Batteries`   | `Portable power`         | `local store` | `before testing`            | `Recieved`   |
 
 ## 12.4 Budget Summary
 
 | Budget Item           | Estimated Cost              |
 | --------------------- | ---------------------------:|
-| Electronics           | `[500]`                     |
+| Electronics           | `[400]`                     |
 | Mechanical parts      | `[200]`                     |
 | Fabrication materials | `[0 (Available on campus)]` |
-| Purchased extras      | `[Cost]`                    |
-| Contingency           | `[Cost]`                    |
-| **Total**             | `[Cost]`                    |
+| Purchased extras      | `[0]`                       |
+| Contingency           | `[300]`                     |
+| **Total**             | `[900]`                     |
 
 ## 12.5 Budget Reflection
 
 If your cost is too high, what can be simplified, removed, substituted, or shared?
 
 **Response:**  
-`[Write here]`
+`The design already prioritizes low-cost, commonly available components, making it flexible to scale down if needed. Projector can be obtained in-house.`
 
 ---
 
@@ -701,34 +702,34 @@ Include:
 - how documentation will be maintained.
 
 **Response:**  
-`[Write here]`
+`Tasks are divided based on areas of focus: electronics (ESP32 + motor control), software (tracking + projection + game logic), and fabrication (chassis and assembly). Each member takes primary responsibility for one area while collaborating during integration.`
 
 
 
 ## 13.2 Task Breakdown
 
-| Task ID | Task                    | Owner    | Estimated Hours | Deadline | Dependency | Status  |
-| ------- | ----------------------- | -------- | ---------------:| -------- | ---------- | ------- |
-| T1      | `[Finalize concept]`    | `[Name]` | `2`             | `[Date]` | `None`     | `To Do` |
-| T2      | `[Complete BOM]`        | `[Name]` | `1`             | `[Date]` | `T1`       | `To Do` |
-| T3      | `[Test electronics]`    | `[Name]` | `2`             | `[Date]` | `T1`       | `To Do` |
-| T4      | `[Build structure]`     | `[Name]` | `4`             | `[Date]` | `T1`       | `To Do` |
-| T5      | `[Write control code]`  | `[Name]` | `4`             | `[Date]` | `T3`       | `To Do` |
-| T6      | `[Integrate system]`    | `[Name]` | `4`             | `[Date]` | `T4, T5`   | `To Do` |
-| T7      | `[Playtest]`            | `[Name]` | `2`             | `[Date]` | `T6`       | `To Do` |
-| T8      | `[Refine and document]` | `[Name]` | `3`             | `[Date]` | `T7`       | `To Do` |
+| Task ID | Task                    | Owner    | Estimated Hours | Deadline     | Dependency | Status |
+| ------- | ----------------------- | -------- | ---------------:| ------------ | ---------- | ------ |
+| T1      | `[Finalize concept]`    | `[Name]` | `2`             | `1st April`  | `None`     | `Done` |
+| T2      | `[Complete BOM]`        | `[Name]` | `1`             | `8th April`  | `T1`       | `Done` |
+| T3      | `[Test electronics]`    | `[Name]` | `2`             | `15th April` | `T1`       | `Done` |
+| T4      | `[Build structure]`     | `[Name]` | `4`             | `18th April` | `T1`       | `Done` |
+| T5      | `[Write control code]`  | `[Name]` | `4`             | `18th April` | `T3`       | `Done` |
+| T6      | `[Integrate system]`    | `[Name]` | `4`             | `19th April` | `T4, T5`   | `Done` |
+| T7      | `[Playtest]`            | `[Name]` | `2`             | `21st April` | `T6`       | `Done` |
+| T8      | `[Refine and document]` | `[Name]` | `3`             | `22nd April` | `T7`       | `Done` |
 
 ## 13.3 Responsibility Split
 
 | Area                 | Main Owner | Support Owner |
 | -------------------- | ---------- | ------------- |
-| Concept and gameplay | `[Mukund]` | `[Manan]`     |
+| Concept and gameplay | `[Manan]`  | `[Mukund]`    |
 | Electronics          | `[Mukund]` | `[Manan]`     |
 | Coding               | `[Mukund]` | `[Manan]`     |
 | App                  | `[NA]`     | `[NA]`        |
 | Mechanical build     | `[Manan]`  | `[Mukund]`    |
 | Testing              | `[Manan]`  | `[Mukund]`    |
-| Documentation        | `[Manan]`  | `[Mukund]`    |
+| Documentation        | `[Mukund]` | `[Manan]`     |
 
 ---
 
@@ -780,12 +781,12 @@ Expected outcomes:
 
 ## 14.2 Weekly Update Log
 
-| Week   | Planned Goal   | What Actually Happened | What Changed   | Next Steps     |
-| ------ | -------------- | ---------------------- | -------------- | -------------- |
-| Week 1 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| Week 2 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| Week 3 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| Week 4 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
+| Week   | Planned Goal   | What Actually Happened                     | What Changed   | Next Steps     |
+| ------ | -------------- | ------------------------------------------ | -------------- | -------------- |
+| Week 1 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
+| Week 2 | `[Write here]` | `[Write here]`                             | `[Write here]` | `[Write here]` |
+| Week 3 | `[Write here]` | `[Write here]`                             | `[Write here]` | `[Write here]` |
+| Week 4 | `[Write here]` | `[Write here]`                             | `[Write here]` | `[Write here]` |
 
 ---
 
@@ -815,11 +816,11 @@ What is the single biggest uncertainty in your project at this stage?
 ## 16.1 Technical Testing Plan
 
 | What Needs Testing       | How You Will Test It | Success Condition           |
-| ------------------------ | ------------------------------------------------ | --------------------------- |
-| `[Bluetooth connection]` | `[Method]`                                       | `[What counts as success?]` |
-| `[Mechanism movement]`   | `[Method]`                                       | `[What counts as success?]` |
-| `[Sensor behavior]`      | `[Method]`                                       | `[What counts as success?]` |
-| `[App communication]`    | `[Method]`                                       | `[What counts as success?]` |
+| ------------------------ | -------------------- | --------------------------- |
+| `[Bluetooth connection]` | `[Method]`           | `[What counts as success?]` |
+| `[Mechanism movement]`   | `[Method]`           | `[What counts as success?]` |
+| `[Sensor behavior]`      | `[Method]`           | `[What counts as success?]` |
+| `[App communication]`    | `[Method]`           | `[What counts as success?]` |
 
 ## 16.2 Playtesting Plan
 
