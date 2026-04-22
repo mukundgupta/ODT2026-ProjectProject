@@ -71,6 +71,8 @@ By the final review, this README should clearly show:
 
 `Project Project`
 
+`(because Project-or)`
+
 ## 1.4 One-Line Pitch
 
 `A projected, fully customizable game world where a real RC car interacts with and reacts to dynamic virtual obstacles in real time.`
