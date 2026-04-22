@@ -73,6 +73,8 @@ By the final review, this README should clearly show:
 
 `(because Project-or)`
 
+
+
 ## 1.4 One-Line Pitch
 
 `A projected, fully customizable game world where a real RC car interacts with and reacts to dynamic virtual obstacles in real time.`
@@ -781,12 +783,12 @@ Expected outcomes:
 
 ## 14.2 Weekly Update Log
 
-| Week   | Planned Goal   | What Actually Happened                     | What Changed   | Next Steps     |
-| ------ | -------------- | ------------------------------------------ | -------------- | -------------- |
-| Week 1 | `[Write here]` | `[Write here]` | `[Write here]` | `[Write here]` |
-| Week 2 | `[Write here]` | `[Write here]`                             | `[Write here]` | `[Write here]` |
-| Week 3 | `[Write here]` | `[Write here]`                             | `[Write here]` | `[Write here]` |
-| Week 4 | `[Write here]` | `[Write here]`                             | `[Write here]` | `[Write here]` |
+| Week   | Planned Goal   | What Actually Happened | What Changed   | Next Steps     |
+| ------ | -------------- | ---------------------- | -------------- | -------------- |
+| Week 1 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
+| Week 2 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
+| Week 3 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
+| Week 4 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
 
 ---
 
@@ -794,13 +796,13 @@ Expected outcomes:
 
 ## 15.1 Risk Register
 
-| Risk                                                            | Type         | Likelihood | Impact   | Mitigation Plan                                                                        | Owner    |
-| --------------------------------------------------------------- | ------------ | ---------- | -------- | -------------------------------------------------------------------------------------- | -------- |
-| WiFi connection between laptop and ESP32 becomes unstable       | `Technical`  | `Medium`   | `High`   | `Keep ESP32 close, ensure stable power supply, reduce network load, add fail-safe stop | `[Name]` |
-| Camera tracking becomes jittery or loses marker during movement | `Technical`  | `High`     | `Medium` | Improve lighting, tune camera settings, add smoothing and limit speed                  | `[Name]` |
-| Car drifts due to uneven motor speeds or friction               | `Mechanical` | `High`     | `Medium` | Calibrate motor speeds, reduce friction (better caster), adjust PWM values             | `[Name]` |
-| Projection misalignment with physical space`                    | `Technical`  | `Medium`   | `High`   | Manual calibration using draggable points before gameplay                              | `[Name]` |
-| Power fluctuations from battery affecting motors/WiFi           | `Electrical` | `Medium`   | `High`   | Use stable voltage via buck converter, ensure batteries are charged                    |          |
+| Risk                                                            | Type         | Likelihood | Impact   | Mitigation Plan                                                                       | Owner                |
+| --------------------------------------------------------------- | ------------ | ---------- | -------- | ------------------------------------------------------------------------------------- | -------------------- |
+| WiFi connection between laptop and ESP32 becomes unstable       | `Technical`  | `Medium`   | `High`   | Keep ESP32 close, ensure stable power supply, reduce network load, add fail-safe stop | `[Mukund]`           |
+| Camera tracking becomes jittery or loses marker during movement | `Technical`  | `High`     | `Medium` | Improve lighting, tune camera settings, add smoothing and limit speed                 | `[Manan]`            |
+| Car drifts due to uneven motor speeds or friction               | `Mechanical` | `High`     | `Medium` | Calibrate motor speeds, reduce friction (better caster), adjust PWM values            | `[Mukund and Manan]` |
+| Projection misalignment with physical space`                    | `Technical`  | `Medium`   | `High`   | Manual calibration using draggable points before gameplay                             | `[Manan]`            |
+| Power fluctuations from battery affecting motors/WiFi           | `Electrical` | `Medium`   | `High`   | Use stable voltage via buck converter, ensure batteries are charged                   | `[Mukund]`           |
 
 ## 15.2 Biggest Unknown Right Now
 
