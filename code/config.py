@@ -52,15 +52,18 @@ DEFAULT_CAR_POS = [400, 300]
 # =============================================================================
 # Projection Calibration
 # =============================================================================
+# Which monitor to use for the projector (0 = primary, 1 = second display)
+PROJECTOR_MONITOR = 1
+
 # Draggable-point hit radius (pixels)
 CALIBRATION_POINT_RADIUS = 15
 
-# Default projector destination corners
+# Default projector destination corners (moved inward for visibility)
 DEFAULT_DST_POINTS = [
-    [100, 50],
-    [700, 0],
-    [750, 550],
-    [50, 600],
+    [200, 150],
+    [600, 150],
+    [600, 450],
+    [200, 450],
 ]
 
 # =============================================================================
@@ -85,10 +88,33 @@ COLOR_CALIBRATION_POINT = (0, 255, 255)  # BGR in OpenCV context
 COLOR_CALIBRATION_TEXT = (0, 0, 255)
 
 # =============================================================================
+# ESP32 Control
+# =============================================================================
+ESP32_IP = "192.168.4.1"
+ESP32_BASE_URL = f"http://{ESP32_IP}"
+ESP32_TIMEOUT = 0.15  # seconds — short enough to not block, long enough for WiFi
+
+# How many pixels to shift the car rect when simulating a move
+MOVE_SIMULATION_STEP = 30
+
+# Shake behavior: alternates left/right when blocked
+SHAKE_DURATION_FRAMES = 6   # total frames per shake burst
+SHAKE_INTERVAL_FRAMES = 3   # frames between left/right toggle
+
+# Command routes (appended to ESP32_BASE_URL)
+ESP32_ROUTES = {
+    "forward":  "/forward",
+    "backward": "/backward",
+    "left":     "/left",
+    "right":    "/right",
+    "stop":     "/stop",
+}
+
+# =============================================================================
 # Future hooks — placeholder flags
 # =============================================================================
 # Set True when ESP32 integration is ready
-ENABLE_ESP32 = False
+ENABLE_ESP32 = True
 # Set True when phone/controller input is ready
 ENABLE_REMOTE_INPUT = False
 # Set True when sound effects are ready

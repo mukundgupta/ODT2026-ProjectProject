@@ -22,19 +22,21 @@ Architecture:
 import sys
 import cv2
 import pygame
-from config import FPS
+from config import FPS, PROJECTOR_MONITOR
 from tracking import Tracker
 from mapping import ProjectionMapper
 from game import GameState
 from render import Renderer
+from controller import CarController
 
 
 def main():
     # --- Initialise subsystems ---
     tracker = Tracker()
     mapper = ProjectionMapper()
+    renderer = Renderer()       # must init before GameState (needs display for image loading)
     game = GameState()
-    renderer = Renderer()
+    controller = CarController()
 
     mode = "calibrate"  # "calibrate" or "track"
 
@@ -47,9 +49,24 @@ def main():
 
     cv2.setMouseCallback("Projection", _mouse_cb)
 
-    # Optional: uncomment for fullscreen projector output
-    # cv2.setWindowProperty("Projection", cv2.WND_PROP_FULLSCREEN,
-    #                       cv2.WINDOW_FULLSCREEN)
+    # Move window to the second display, then go fullscreen.
+    # screeninfo gives us the monitor offset so OpenCV places the
+    # window on the right screen before expanding it.
+    try:
+        from screeninfo import get_monitors
+        monitors = get_monitors()
+        if len(monitors) >= 2:
+            m = monitors[PROJECTOR_MONITOR]
+            cv2.moveWindow("Projection", m.x, m.y)
+            cv2.setWindowProperty("Projection", cv2.WND_PROP_FULLSCREEN,
+                                  cv2.WINDOW_FULLSCREEN)
+            print(f"[DISPLAY] Fullscreen on monitor {PROJECTOR_MONITOR}: "
+                  f"{m.width}x{m.height} at ({m.x},{m.y})")
+        else:
+            print("[DISPLAY] Only one monitor detected — running windowed")
+    except ImportError:
+        print("[DISPLAY] screeninfo not installed — running windowed. "
+              "Install with: pip install screeninfo")
 
     # ------------------------------------------------------------------
     # Main loop
@@ -82,6 +99,9 @@ def main():
 
         result = tracker.detect(frame)
 
+        # --- Controller: read keyboard + decide command ---
+        controller.read_input()
+
         # --- Game logic (only in track mode) ---
         if mode == "track":
             if goal_cooldown > 0:
@@ -92,14 +112,20 @@ def main():
                     game.advance_level()
                     goal_cooldown = 30  # brief pause before next level activates
 
+            # Controller: simulate move, check collision, send to ESP32
+            # Skip controller during transitions so the car doesn't move
+            if not game.transition.active:
+                controller.update(result.car_pos, result.car_size, game.obstacles)
+
         # --- Render game surface ---
-        renderer.clear()
+        renderer.clear(game.background)
         renderer.draw_border()
         renderer.draw_obstacles(game)
         renderer.draw_goal(game.goal_rect)
         renderer.draw_car(result.car_pos, result.car_polygon, result.car_size)
         renderer.draw_debug_corners(result.markers, result.homography)
-        renderer.draw_hud(game, mode, result.car_detected)
+        renderer.draw_hud(game, mode, result.car_detected, controller)
+        renderer.draw_transition(game.transition)
         renderer.flip()
 
         # --- Warp for projector ---

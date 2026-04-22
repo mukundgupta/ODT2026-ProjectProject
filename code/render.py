@@ -32,9 +32,12 @@ class Renderer:
         self.clock = pygame.time.Clock()
         self.font = pygame.font.SysFont("monospace", 20)
 
-    def clear(self):
-        """Fill the screen with the background color."""
-        self.screen.fill(COLOR_BACKGROUND)
+    def clear(self, background=None):
+        """Fill the screen with the background image or solid color."""
+        if background is not None:
+            self.screen.blit(background, (0, 0))
+        else:
+            self.screen.fill(COLOR_BACKGROUND)
 
     def draw_border(self):
         """Draw a white border around the play area."""
@@ -44,10 +47,23 @@ class Renderer:
         )
 
     def draw_obstacles(self, game_state):
-        """Draw all obstacles with colors reflecting their interaction state."""
+        """
+        Draw all obstacles as translucent rectangles.
+        Color reflects interaction state (normal/near/collision).
+        Opacity is controlled by game.OBSTACLE_ALPHA.
+        """
+        from game import OBSTACLE_ALPHA
+
         for i, obs in enumerate(game_state.obstacles):
             color = game_state.get_obstacle_color(i)
-            pygame.draw.rect(self.screen, color, obs)
+
+            # Create a per-obstacle surface with alpha
+            surf = pygame.Surface((obs.width, obs.height), pygame.SRCALPHA)
+            surf.fill((*color, OBSTACLE_ALPHA))
+            self.screen.blit(surf, (obs.x, obs.y))
+
+            # Draw a thin border so the outline is always visible
+            pygame.draw.rect(self.screen, color, obs, 2)
 
     def draw_goal(self, goal_rect):
         """Draw the goal area as a filled rectangle with a border."""
@@ -111,8 +127,8 @@ class Renderer:
                     (int(x), int(y)), 8,
                 )
 
-    def draw_hud(self, game_state, mode, car_detected):
-        """Draw a small heads-up display with level info and mode."""
+    def draw_hud(self, game_state, mode, car_detected, controller=None):
+        """Draw a small heads-up display with level info, mode, and controls."""
         lines = [
             f"Mode: {mode.upper()}",
             f"{game_state.level_name}",
@@ -122,11 +138,24 @@ class Renderer:
         if not car_detected:
             lines.append("Car: NOT DETECTED")
 
+        # Show controller state when available
+        if controller is not None:
+            cmd = controller.active_command.upper()
+            if controller.is_blocked:
+                lines.append(f"Command: {controller.current_command.upper()} → BLOCKED")
+            else:
+                lines.append(f"Command: {cmd}")
+
         y = 10
         for line in lines:
             surf = self.font.render(line, True, (200, 200, 200))
             self.screen.blit(surf, (10, y))
             y += 24
+
+    def draw_transition(self, transition):
+        """Draw the level transition overlay (fade + title text)."""
+        if transition.active:
+            transition.draw(self.screen)
 
     def flip(self):
         """Update the display."""
