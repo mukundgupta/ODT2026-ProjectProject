@@ -62,14 +62,14 @@ By the final review, this README should clearly show:
 
 ## 1.2 Team Members
 
-| Name           | Primary Role                                    | Secondary Role | Strengths Brought to the Project |
-| -------------- | ----------------------------------------------- | -------------- | -------------------------------- |
-| `Mukund Gupta` | `[Electronics / Coding / App / Mechanics]`      | `Fabrication`  | `Programming, Software `         |
-| `Manan Gupta`  | `[Electronics / App / Fabrication / Mechanics]` | `[Coding]`     | `Material Handling, Hardware`    |
+| Name           | Primary Role                    | Secondary Role | Strengths Brought to the Project |
+| -------------- | ------------------------------- | -------------- | -------------------------------- |
+| `Mukund Gupta` | `[Electronics / Coding / App ]` | `Fabrication`  | `Programming, Software `         |
+| `Manan Gupta`  | `[Electronics / Fabrication]`   | `[Coding]`     | `Material Handling, Hardware`    |
 
 ## 1.3 Project Title
 
-`Project Project`
+`Project Project"`
 
 `(because Project-or)`
 
@@ -143,18 +143,20 @@ Complete the sentence below:
 
 List what inspired the project.
 
-| Source Type                                           | Title / Link      | What Inspired You                 |
-| ----------------------------------------------------- | ----------------- | --------------------------------- |
-| `[Toy / Board game / App / Video / Website / Object]` | `[Link or title]` | `[What did you learn or borrow?]` |
-| `[Toy / Board game / App / Video / Website / Object]` | `[Link or title]` | `[What did you learn or borrow?]` |
-| `[Toy / Board game / App / Video / Website / Object]` | `[Link or title]` | `[What did you learn or borrow?]` |
+| Source Type | Title / Link                                                        | What Inspired You                                                                         |
+| ----------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `[Video]`   | `https://www.instagram.com/reel/DW4CT7WCDry/?igsh=cXg3dzAxYmdncDBo` | `How projection mapping can be used to create interactive digital + physical experiences` |
+|             |                                                                     |                                                                                           |
+|             |                                                                     |                                                                                           |
 
 ## 3.2 Original Twist
 
 What makes your project original?
 
 **Response:**  
-`[Write here]`
+`The project combines projection mapping and real-time camera tracking to turn any flat surface into a fully customizable game environment. Unlike typical AR or projection setups, the physical car directly interacts with a projected world that can be reconfigured instantly by changing layouts, obstacles, and rules without modifying the hardware.
+
+The key originality lies in treating the projection as a dynamic game engine for a physical object, where the same setup can support multiple game modes and experiences simply by changing the projected system.`
 
 ---
 
@@ -176,35 +178,35 @@ Examples:
 
 ## 4.2 Intended Player / Audience
 
-| Question                            | Response       |
-| ----------------------------------- | -------------- |
-| Who is this for?                    | `[Write here]` |
-| Age range                           | `[Write here]` |
-| Solo or multiplayer                 | `[Write here]` |
-| Expected duration of one round      | `[Write here]` |
-| What should the player feel?        | `[Write here]` |
-| Is explanation required before use? | `[Write here]` |
+| Question                            | Response                                                                                         |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Who is this for?                    | `[Write here]`                                                                                   |
+| Age range                           | `[Write here]`                                                                                   |
+| Solo or multiplayer                 | `Currently Solo, can be expanded`                                                                |
+| Expected duration of one round      | `~five minutes`                                                                                  |
+| What should the player feel?        | `Curious, engaged, slightly challenged, and in control of a “real object inside a digital game”` |
+| Is explanation required before use? | `minimial (move car to goal, avoid obstacles)`                                                   |
 
 ## 4.3 Player Journey
 
 Describe exactly how a player will use the project.
 
-1. **Approach:** `[How does the player first encounter it?]`
-2. **Start:** `[How do they begin?]`
-3. **First Action:** `[What do they do first?]`
-4. **Main Interaction:** `[What keeps happening during use?]`
-5. **System Response:** `[How does the project respond?]`
-6. **Win / Lose / End Condition:** `[How does one round end?]`
-7. **Reset:** `[How does the next round begin?]`
+1. **Approach:** `The player sees a projected map on a surface with a physical car placed within it.`
+2. **Start:** `The system is already running; the player is told they can control the car.`
+3. **First Action:** `The player begins moving the car toward a visible target area.`
+4. **Main Interaction:** `The player navigates the car through obstacles while the system tracks its position and updates the projection in real time.`
+5. **System Response:** `Obstacles highlight when the car is close, block movement when necessary, and the system reacts visually to the car’s position.`
+6. **Win / Lose / End Condition:** `Reaching the target block completes the level and advances to the next one.`
+7. **Reset:** `After finishing all 3 levels (or restarting), the game resets to the first level automatically.`
 
 ## 4.4 Rules of Play
 
 If your project is a game, list the rules clearly.
 
-- `[Rule 1]`
-- `[Rule 2]`
-- `[Rule 3]`
-- `[Rule 4]`
+* Reach the highlighted target area to complete each level
+* Avoid colliding with obstacles
+* Movement may be restricted if an obstacle is too close
+* Complete all 3 levels to finish the game
 
 ---
 
@@ -216,24 +218,29 @@ Your project will be considered complete only if these conditions are met.
 
 - [x] `Player can control the car remotely`
 - [x] `Car interacts with the virtual obstacles`
-- [ ] `[Condition 3]`
-- [ ] `[Condition 4]`
-- [ ] `[Condition 5]`
+- [x] `Car position is accurately tracked in real time`
+- [x] `At least one complete level can be played from start to finish`
+- [x] `System responds consistently (movement blocking / visual feedback works reliably)`
 
 ## 5.2 Minimum Viable Version
 
 What is the smallest version of this project that still delivers the core experience?
 
 **Response:**  
-`User will be able to control the car and move around the projected play area, where the car will stop or react to the obstacles. There would be an end goal to each "level" or mode.`
+`User can control the car within a projected play area, where its position is tracked in real time and it interacts with virtual obstacles. The system prevents movement into obstacles and provides feedback, and at least one level includes a clear start and goal condition.`
 
 ## 5.3 Stretch Features
 
 What features are nice to have but not essential?
 
-- `Customizable maps, where players can make the own obstacle course.`
-- `Use camera to track colors, through which the car can interact with real-world objects rather than just virtual.`
-- `[Stretch feature 3]`
+- Customizable maps, where players can create their own obstacle layouts
+
+- Use camera-based color tracking to interact with real-world objects instead of only virtual ones
+* Multiple levels with increasing difficulty and different mechanics
+
+* [Implemented] Visual effects (animations, feedback when near obstacles, level transitions)
+
+* Sound feedback (collision, success, ambient effects)
 
 ---
 
@@ -280,16 +287,23 @@ Include:
 - app interaction if any.
 
 **Response:**  
-`[Write here]`
+The camera feed is processed on a laptop using computer vision to detect the car and map its position into a virtual coordinate system. This position is then used to update a projected game environment in real time, including obstacles and goal areas.
+
+When the player attempts to move the car, the system checks whether movement in that direction is allowed (e.g., no obstacle nearby). Based on this logic, commands are sent to the ESP32, which controls the motors of the car.
+
+The physical structure includes the car chassis with motors and a marker (along with structures to block light), while the digital system includes the projection, tracking, and game logic. The interaction between these creates a feedback loop between the real and virtual worlds.
 
 ## 6.3 Input / Output Map
 
-| System Part                                | Type            | What It Does |
-| ------------------------------------------ | --------------- | ------------ |
-| `[Button / Sensor / Switch / App Input]`   | Input           | `[Describe]` |
-| `[ESP32 / Controller]`                     | Processing      | `[Describe]` |
-| `[LED / Motor / Servo / Buzzer / Display]` | Output          | `[Describe]` |
-| `[Mechanical Assembly]`                    | Physical Action | `[Describe]` |
+| System Part                              | Type            | What It Does                                                               |
+| ---------------------------------------- | --------------- | -------------------------------------------------------------------------- |
+| `Controller (Laptop Interface: W/A/S/D)` | Input           | `Sends movement commands (forward, back, left, right)`                     |
+| `Camera (Phone mounted on top)`          | Input           | `Captures real-world view and detects ArUco markers`                       |
+| `Laptop (Python + OpenCV + Pygame)`      | Processing      | `Tracks car position, runs game logic, checks collisions, maps projection` |
+| `ESP32`                                  | Processing      | `Receives commands and controls motor driver`                              |
+| `Motors (via driver module)`             | Output          | `Moves the car physically`                                                 |
+| `Projector`                              | Output          | `Displays the virtual game environment`                                    |
+| `Car chassis + marker`                   | Physical Action | `Moves in real space and interacts with projected world`                   |
 
 ---
 
@@ -323,12 +337,12 @@ Add a sketch with labels showing:
 
 ## 7.3 Approximate Dimensions
 
-| Dimension        | Value          |
-| ---------------- | -------------- |
-| Length           | `[Write here]` |
-| Width            | `[Write here]` |
-| Height           | `[Write here]` |
-| Estimated weight | `[Write here]` |
+| Dimension        | Value   |
+| ---------------- | ------- |
+| Length           | `16 cm` |
+| Width            | `16 cm` |
+| Height           | `8 cm`  |
+| Estimated weight | `400 g` |
 
 ---
 
@@ -343,7 +357,7 @@ Check all that apply.
 - [ ] Belt drives
 - [ ] Linkages
 - [ ] Hinges
-- [ ] Shafts
+- [x] Shafts
 - [ ] Springs
 - [ ] Bearings
 - [x] Wheels
@@ -356,7 +370,11 @@ Check all that apply.
 Describe the mechanism and what it is meant to do.
 
 **Response:**  
-`[Write here]`
+`The system consists of a small two-wheel drive car powered by DC motors connected to wheels via motor shafts. The motors are mounted onto a fabricated chassis, designed to hold them firmly in place to prevent wobble or misalignment.
+
+A third contact point (caster or low-friction base) is used to balance the car and maintain stability while moving. The chassis also holds the electronics, battery, and an ArUco marker on top for tracking.
+
+The mechanism is designed for simple differential drive: both wheels rotate together for forward/backward movement, and in opposite directions for turning or rotating in place.`
 
 ## 8.3 Motion Planning
 
@@ -369,16 +387,37 @@ If something moves, explain:
 - what could go wrong.
 
 **Response:**  
-`[Write here]`
+`
+
+**What moves:**  
+The two main wheels rotate to drive the car, while the chassis moves across the surface.
+
+**What causes the movement:**  
+DC motors controlled by the ESP32 (via a motor driver) generate rotation in the wheels.
+
+**How far it moves:**  
+The car moves freely within the defined projection area, typically covering the full mapped surface (table/floor area).
+
+**How fast it moves:**  
+Speed is controlled using PWM, allowing slower, controlled movement for accuracy. The speed is intentionally limited to maintain tracking stability and precision.
+
+**What could go wrong:**
+
+* Uneven motor speeds causing the car to drift
+* Friction or imbalance (especially from the rear support) affecting smooth movement
+* Wheels slipping on the surface
+* Loose motor mounting causing instability
+* Sudden movements reducing tracking accuracy
+* Power fluctuations affecting motor performance`
 
 ## 8.4 Simulation / CAD / Animation Before Making
 
 If your project includes mechanical motion, document the digital planning before fabrication.
 
-| Tool Used                          | File / Link            | What Was Tested            |
-| ---------------------------------- | ---------------------- | -------------------------- |
-| `[Fusion 360 / Tinkercad / other]` | `[Link or screenshot]` | `[What did you validate?]` |
-| `[Tool]`                           | `[Link or screenshot]` | `[What did you validate?]` |
+| Tool Used                      | File / Link            | What Was Tested                                |
+| ------------------------------ | ---------------------- | ---------------------------------------------- |
+| `Blender models for structure` | `[Link or screenshot]` | `How the car can look, variations`             |
+| `Fusion 360`                   | `[Link or screenshot]` | `Final physical form with accurate dimensions` |
 
 ## 8.5 Changes After Digital Testing
 
@@ -393,15 +432,15 @@ What changed after the CAD, animation, or simulation stage?
 
 ## 9.1 Electronics Used
 
-| Component               | Quantity | Purpose               |
-| ----------------------- | --------:| --------------------- |
-| `[ESP32]`               | `1`      | `[Main controller]`   |
-| `[LN296 Motor Driver]`  | `1`      | `[Control Motors]`    |
-| `[BO Motors]`           | `2`      | `[Rotate wheels]`     |
-| `[Buck Converter]`      | `1`      | `[Power ESP32]`       |
-| `[Li Ion Battery Pack]` | `2`      | `[Power]`             |
-| `[Projector]`           | `1`      | `[Display obstacles]` |
-|                         |          |                       |
+| Component                                          | Quantity | Purpose               |
+| -------------------------------------------------- | --------:| --------------------- |
+| `[ESP32]`                                          | `1`      | `[Main controller]`   |
+| `[L298N Motor Driver]` | `1`      | `[Control Motors]`    |
+| `[BO Motors]`                                      | `2`      | `[Rotate wheels]`     |
+| `[Buck Converter]`                                 | `1`      | `[Power ESP32]`       |
+| `[Li Ion Battery Pack]`                            | `2`      | `[Power]`             |
+| `[Projector]`                                      | `1`      | `[Display obstacles]` |
+|                                                    |          |                       |
 
 ## 9.2 Wiring Plan
 
