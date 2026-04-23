@@ -58,7 +58,7 @@ By the final review, this README should clearly show:
 
 ## 1.1 Studio / Group Name
 
-`[Enter your group name]`
+`Project Project`
 
 ## 1.2 Team Members
 
@@ -181,7 +181,7 @@ Examples:
 | Question                            | Response                                                                                         |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------ |
 | Who is this for?                    | `No specific demographic, anyone who is interested`                                              |
-| Age range                           | ``10+ (but intuitive enough for younger children to play)`                                       |
+| Age range                           | ``9+ (but intuitive enough for younger children to play)`                                        |
 | Solo or multiplayer                 | `Currently Solo, can be expanded`                                                                |
 | Expected duration of one round      | `~three minutes`                                                                                 |
 | What should the player feel?        | `Curious, engaged, slightly challenged, and in control of a “real object inside a digital game”` |
@@ -236,7 +236,6 @@ What features are nice to have but not essential?
 - Customizable maps, where players can create their own obstacle layouts
 
 - Use camera-based color tracking to interact with real-world objects instead of only virtual ones
-
 * Multiple levels with increasing difficulty and different mechanics
 
 * [Implemented] Visual effects (animations, feedback when near obstacles, level transitions)
@@ -434,14 +433,14 @@ What changed after the CAD, animation, or simulation stage?
 ## 9.1 Electronics Used
 
 | Component                 | Quantity | Purpose                               |
-| ------------------------- | -------: | ------------------------------------- |
-| `[ESP32]`                 |      `1` | `[Main controller]`                   |
-| `[L298N Motor Driver]`    |      `1` | `[Control Motors]`                    |
-| `[BO Motors]`             |      `2` | `[Rotate wheels]`                     |
-| `[Buck Converter]`        |      `1` | `[Power ESP32]`                       |
-| `[Li Ion Battery Pack]`   |      `2` | `[Power]`                             |
-| `[Projector]`             |      `1` | `[Display obstacles]`                 |
-| `Camera (Webcam / Phone)` |      `1` | `[Tracks car position using markers]` |
+| ------------------------- | --------:| ------------------------------------- |
+| `[ESP32]`                 | `1`      | `[Main controller]`                   |
+| `[L298N Motor Driver]`    | `1`      | `[Control Motors]`                    |
+| `[BO Motors]`             | `2`      | `[Rotate wheels]`                     |
+| `[Buck Converter]`        | `1`      | `[Power ESP32]`                       |
+| `[Li Ion Battery Pack]`   | `2`      | `[Power]`                             |
+| `[Projector]`             | `1`      | `[Display obstacles]`                 |
+| `Camera (Webcam / Phone)` | `1`      | `[Tracks car position using markers]` |
 
 ## 9.2 Wiring Plan
 
@@ -635,12 +634,12 @@ Insert a sketch or screenshot of the app interface.
 ## 12.1 Full BOM
 
 | Item                             | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec               | Why This Choice?          |
-| -------------------------------- | -------: | ------- | ------------ | -------------: | ----------------------------- | ------------------------- |
-| `[ESP32]`                        |      `1` | `Yes`   | `No`         |            `0` | `38 Pin ESP32`                | `[To control components]` |
-| `[Motor Driver]`                 |    `[1]` | `[Yes]` | `[No]`       |            `0` | `[LN296]`                     | `[To drive motors]`       |
-| `[DC Motors and wheel]`          |    `[2]` | `[No]`  | `[Yes]`      |        `[150]` | `[BO Motors and 6 cm wheels]` | `[Reason]`                |
-| `[Buck Converter]`               |    `[1]` | `[No]`  | `[Yes]`      |         `[75]` |                               |                           |
-| `[Li-ion batteries with holder]` |    `[1]` | `[No]`  | `[Yes]`      |        `[200]` |                               |                           |
+| -------------------------------- | --------:| ------- | ------------ | --------------:| ----------------------------- | ------------------------- |
+| `[ESP32]`                        | `1`      | `Yes`   | `No`         | `0`            | `38 Pin ESP32`                | `[To control components]` |
+| `[Motor Driver]`                 | `[1]`    | `[Yes]` | `[No]`       | `0`            | `[LN296]`                     | `[To drive motors]`       |
+| `[DC Motors and wheel]`          | `[2]`    | `[No]`  | `[Yes]`      | `[150]`        | `[BO Motors and 6 cm wheels]` | `[Reason]`                |
+| `[Buck Converter]`               | `[1]`    | `[No]`  | `[Yes]`      | `[75]`         |                               |                           |
+| `[Li-ion batteries with holder]` | `[1]`    | `[No]`  | `[Yes]`      | `[200]`        |                               |                           |
 
 ## 12.2 Material Justification
 
@@ -670,14 +669,14 @@ Examples:
 
 ## 12.4 Budget Summary
 
-| Budget Item           |              Estimated Cost |
-| --------------------- | --------------------------: |
-| Electronics           |                     `[400]` |
-| Mechanical parts      |                     `[200]` |
+| Budget Item           | Estimated Cost              |
+| --------------------- | ---------------------------:|
+| Electronics           | `[400]`                     |
+| Mechanical parts      | `[200]`                     |
 | Fabrication materials | `[0 (Available on campus)]` |
-| Purchased extras      |                       `[0]` |
-| Contingency           |                     `[300]` |
-| **Total**             |                     `[900]` |
+| Purchased extras      | `[0]`                       |
+| Contingency           | `[300]`                     |
+| **Total**             | `[900]`                     |
 
 ## 12.5 Budget Reflection
 
@@ -708,15 +707,15 @@ Include:
 ## 13.2 Task Breakdown
 
 | Task ID | Task                    | Owner    | Estimated Hours | Deadline     | Dependency | Status |
-| ------- | ----------------------- | -------- | --------------: | ------------ | ---------- | ------ |
-| T1      | `[Finalize concept]`    | `[Name]` |             `2` | `1st April`  | `None`     | `Done` |
-| T2      | `[Complete BOM]`        | `[Name]` |             `1` | `8th April`  | `T1`       | `Done` |
-| T3      | `[Test electronics]`    | `[Name]` |             `2` | `15th April` | `T1`       | `Done` |
-| T4      | `[Build structure]`     | `[Name]` |             `4` | `18th April` | `T1`       | `Done` |
-| T5      | `[Write control code]`  | `[Name]` |             `4` | `18th April` | `T3`       | `Done` |
-| T6      | `[Integrate system]`    | `[Name]` |             `4` | `19th April` | `T4, T5`   | `Done` |
-| T7      | `[Playtest]`            | `[Name]` |             `2` | `21st April` | `T6`       | `Done` |
-| T8      | `[Refine and document]` | `[Name]` |             `3` | `22nd April` | `T7`       | `Done` |
+| ------- | ----------------------- | -------- | ---------------:| ------------ | ---------- | ------ |
+| T1      | `[Finalize concept]`    | `[Name]` | `2`             | `1st April`  | `None`     | `Done` |
+| T2      | `[Complete BOM]`        | `[Name]` | `1`             | `8th April`  | `T1`       | `Done` |
+| T3      | `[Test electronics]`    | `[Name]` | `2`             | `15th April` | `T1`       | `Done` |
+| T4      | `[Build structure]`     | `[Name]` | `4`             | `18th April` | `T1`       | `Done` |
+| T5      | `[Write control code]`  | `[Name]` | `4`             | `18th April` | `T3`       | `Done` |
+| T6      | `[Integrate system]`    | `[Name]` | `4`             | `19th April` | `T4, T5`   | `Done` |
+| T7      | `[Playtest]`            | `[Name]` | `2`             | `21st April` | `T6`       | `Done` |
+| T8      | `[Refine and document]` | `[Name]` | `3`             | `22nd April` | `T7`       | `Done` |
 
 ## 13.3 Responsibility Split
 
