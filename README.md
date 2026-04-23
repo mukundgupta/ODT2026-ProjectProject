@@ -73,8 +73,6 @@ By the final review, this README should clearly show:
 
 `(because Project-or)`
 
-
-
 ## 1.4 One-Line Pitch
 
 `A projected, fully customizable game world where a real RC car interacts with and reacts to dynamic virtual obstacles in real time.`
@@ -635,13 +633,13 @@ Insert a sketch or screenshot of the app interface.
 
 ## 12.1 Full BOM
 
-| Item                             | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec | Why This Choice? |
-| -------------------------------- | --------:| ------- | ------------ | --------------:| --------------- | ---------------- |
-| `[ESP32]`                        | `1`      | `Yes`   | `No`         | `0`            | `[Spec]`        | `[Reason]`       |
-| `[LN296 Driver]`                 | `[1]`    | `[Yes]` | `[No]`       | `0`            | `[Spec]`        | `[Reason]`       |
-| `[BO Motors]`                    | `[2]`    | `[No]`  | `[Yes]`      | `[150]`        | `[Spec]`        | `[Reason]`       |
-| `[Buck Converter]`               | `[1]`    | `[No]`  | `[Yes]`      | `[75]`         |                 |                  |
-| `[Li-ion batteries with holder]` | `[1]`    | `[No]`  | `[Yes]`      | `[200]`        |                 |                  |
+| Item                             | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec               | Why This Choice?          |
+| -------------------------------- | --------:| ------- | ------------ | --------------:| ----------------------------- | ------------------------- |
+| `[ESP32]`                        | `1`      | `Yes`   | `No`         | `0`            | `38 Pin ESP32`                | `[To control components]` |
+| `[Motor Driver]`                 | `[1]`    | `[Yes]` | `[No]`       | `0`            | `[LN296]`                     | `[To drive motors]`       |
+| `[DC Motors and wheel]`          | `[2]`    | `[No]`  | `[Yes]`      | `[150]`        | `[BO Motors and 6 cm wheels]` | `[Reason]`                |
+| `[Buck Converter]`               | `[1]`    | `[No]`  | `[Yes]`      | `[75]`         |                               |                           |
+| `[Li-ion batteries with holder]` | `[1]`    | `[No]`  | `[Yes]`      | `[200]`        |                               |                           |
 
 ## 12.2 Material Justification
 
