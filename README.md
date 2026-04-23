@@ -69,9 +69,11 @@ By the final review, this README should clearly show:
 
 ## 1.3 Project Title
 
-`Project Project"`
+`"Project Project"`
 
 `(because Project-or)`
+
+<img width="1600" height="1131" alt="image" src="https://github.com/user-attachments/assets/c64bfbd4-b3b7-43d9-83ad-c203a5aa11bc" />
 
 ## 1.4 One-Line Pitch
 
@@ -137,8 +139,6 @@ Complete the sentence below:
 
 # 3. Inspiration
 
-
-
 ## 3.1 References
 
 List what inspired the project.
@@ -203,10 +203,10 @@ Describe exactly how a player will use the project.
 
 If your project is a game, list the rules clearly.
 
-* Reach the highlighted target area to complete each level
-* Avoid colliding with obstacles
-* Movement may be restricted if an obstacle is too close
-* Complete all 3 levels to finish the game
+- Reach the highlighted target area to complete each level
+- Avoid colliding with obstacles
+- Movement may be restricted if an obstacle is too close
+- Complete all 3 levels to finish the game
 
 ---
 
@@ -236,6 +236,7 @@ What features are nice to have but not essential?
 - Customizable maps, where players can create their own obstacle layouts
 
 - Use camera-based color tracking to interact with real-world objects instead of only virtual ones
+
 * Multiple levels with increasing difficulty and different mechanics
 
 * [Implemented] Visual effects (animations, feedback when near obstacles, level transitions)
@@ -272,7 +273,7 @@ Check all that apply.
 
 - [x] Installation
 
-- [ ] Other: 
+- [ ] Other:
 
 ## 6.2 High-Level System Description
 
@@ -403,12 +404,12 @@ Speed is controlled using PWM, allowing slower, controlled movement for accuracy
 
 **What could go wrong:**
 
-* Uneven motor speeds causing the car to drift
-* Friction or imbalance (especially from the rear support) affecting smooth movement
-* Wheels slipping on the surface
-* Loose motor mounting causing instability
-* Sudden movements reducing tracking accuracy
-* Power fluctuations affecting motor performance`
+- Uneven motor speeds causing the car to drift
+- Friction or imbalance (especially from the rear support) affecting smooth movement
+- Wheels slipping on the surface
+- Loose motor mounting causing instability
+- Sudden movements reducing tracking accuracy
+- Power fluctuations affecting motor performance`
 
 ## 8.4 Simulation / CAD / Animation Before Making
 
@@ -433,14 +434,14 @@ What changed after the CAD, animation, or simulation stage?
 ## 9.1 Electronics Used
 
 | Component                 | Quantity | Purpose                               |
-| ------------------------- | --------:| ------------------------------------- |
-| `[ESP32]`                 | `1`      | `[Main controller]`                   |
-| `[L298N Motor Driver]`    | `1`      | `[Control Motors]`                    |
-| `[BO Motors]`             | `2`      | `[Rotate wheels]`                     |
-| `[Buck Converter]`        | `1`      | `[Power ESP32]`                       |
-| `[Li Ion Battery Pack]`   | `2`      | `[Power]`                             |
-| `[Projector]`             | `1`      | `[Display obstacles]`                 |
-| `Camera (Webcam / Phone)` | `1`      | `[Tracks car position using markers]` |
+| ------------------------- | -------: | ------------------------------------- |
+| `[ESP32]`                 |      `1` | `[Main controller]`                   |
+| `[L298N Motor Driver]`    |      `1` | `[Control Motors]`                    |
+| `[BO Motors]`             |      `2` | `[Rotate wheels]`                     |
+| `[Buck Converter]`        |      `1` | `[Power ESP32]`                       |
+| `[Li Ion Battery Pack]`   |      `2` | `[Power]`                             |
+| `[Projector]`             |      `1` | `[Display obstacles]`                 |
+| `Camera (Webcam / Phone)` |      `1` | `[Tracks car position using markers]` |
 
 ## 9.2 Wiring Plan
 
@@ -499,19 +500,19 @@ Include:
 **Response:**  
 `
 
-* **Startup behavior:**  
+- **Startup behavior:**  
   The ESP32 initializes motor pins, PWM control, and starts a WiFi access point with a web server. The laptop initializes camera input, tracking system, and projection mapping.
-* **Input handling:**  
+- **Input handling:**  
   Movement commands are received from the laptop (pygame sends http requests)
-* **Sensor reading:**  
+- **Sensor reading:**  
   The camera continuously captures frames, and OpenCV detects ArUco markers to determine the car’s position and orientation.
-* **Decision logic:**  
+- **Decision logic:**  
   The system maps the car’s position into a virtual coordinate system and checks for nearby obstacles or collisions. If movement is valid, the command is allowed; if not, it is blocked or replaced with a feedback action (like a slight shake).
-* **Output behavior:**  
+- **Output behavior:**  
   The ESP32 drives the motors using PWM signals to control speed and direction. The projector displays the updated game environment, including obstacles, targets, and feedback visuals.
-* **Communication logic:**  
+- **Communication logic:**  
   The laptop sends HTTP requests (e.g., `/forward`, `/left`) to the ESP32 over WiFi. The ESP32 parses these commands and executes motor actions.
-* **Reset behavior:**  
+- **Reset behavior:**  
   If no command is received within a short timeout, the ESP32 stops the motors. The game resets when a level is completed or restarted.`
 
 ## 10.3 Code Flowchart
@@ -634,12 +635,12 @@ Insert a sketch or screenshot of the app interface.
 ## 12.1 Full BOM
 
 | Item                             | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec               | Why This Choice?          |
-| -------------------------------- | --------:| ------- | ------------ | --------------:| ----------------------------- | ------------------------- |
-| `[ESP32]`                        | `1`      | `Yes`   | `No`         | `0`            | `38 Pin ESP32`                | `[To control components]` |
-| `[Motor Driver]`                 | `[1]`    | `[Yes]` | `[No]`       | `0`            | `[LN296]`                     | `[To drive motors]`       |
-| `[DC Motors and wheel]`          | `[2]`    | `[No]`  | `[Yes]`      | `[150]`        | `[BO Motors and 6 cm wheels]` | `[Reason]`                |
-| `[Buck Converter]`               | `[1]`    | `[No]`  | `[Yes]`      | `[75]`         |                               |                           |
-| `[Li-ion batteries with holder]` | `[1]`    | `[No]`  | `[Yes]`      | `[200]`        |                               |                           |
+| -------------------------------- | -------: | ------- | ------------ | -------------: | ----------------------------- | ------------------------- |
+| `[ESP32]`                        |      `1` | `Yes`   | `No`         |            `0` | `38 Pin ESP32`                | `[To control components]` |
+| `[Motor Driver]`                 |    `[1]` | `[Yes]` | `[No]`       |            `0` | `[LN296]`                     | `[To drive motors]`       |
+| `[DC Motors and wheel]`          |    `[2]` | `[No]`  | `[Yes]`      |        `[150]` | `[BO Motors and 6 cm wheels]` | `[Reason]`                |
+| `[Buck Converter]`               |    `[1]` | `[No]`  | `[Yes]`      |         `[75]` |                               |                           |
+| `[Li-ion batteries with holder]` |    `[1]` | `[No]`  | `[Yes]`      |        `[200]` |                               |                           |
 
 ## 12.2 Material Justification
 
@@ -669,14 +670,14 @@ Examples:
 
 ## 12.4 Budget Summary
 
-| Budget Item           | Estimated Cost              |
-| --------------------- | ---------------------------:|
-| Electronics           | `[400]`                     |
-| Mechanical parts      | `[200]`                     |
+| Budget Item           |              Estimated Cost |
+| --------------------- | --------------------------: |
+| Electronics           |                     `[400]` |
+| Mechanical parts      |                     `[200]` |
 | Fabrication materials | `[0 (Available on campus)]` |
-| Purchased extras      | `[0]`                       |
-| Contingency           | `[300]`                     |
-| **Total**             | `[900]`                     |
+| Purchased extras      |                       `[0]` |
+| Contingency           |                     `[300]` |
+| **Total**             |                     `[900]` |
 
 ## 12.5 Budget Reflection
 
@@ -704,20 +705,18 @@ Include:
 **Response:**  
 `Tasks are divided based on areas of focus: electronics (ESP32 + motor control), software (tracking + projection + game logic), and fabrication (chassis and assembly). Each member takes primary responsibility for one area while collaborating during integration.`
 
-
-
 ## 13.2 Task Breakdown
 
 | Task ID | Task                    | Owner    | Estimated Hours | Deadline     | Dependency | Status |
-| ------- | ----------------------- | -------- | ---------------:| ------------ | ---------- | ------ |
-| T1      | `[Finalize concept]`    | `[Name]` | `2`             | `1st April`  | `None`     | `Done` |
-| T2      | `[Complete BOM]`        | `[Name]` | `1`             | `8th April`  | `T1`       | `Done` |
-| T3      | `[Test electronics]`    | `[Name]` | `2`             | `15th April` | `T1`       | `Done` |
-| T4      | `[Build structure]`     | `[Name]` | `4`             | `18th April` | `T1`       | `Done` |
-| T5      | `[Write control code]`  | `[Name]` | `4`             | `18th April` | `T3`       | `Done` |
-| T6      | `[Integrate system]`    | `[Name]` | `4`             | `19th April` | `T4, T5`   | `Done` |
-| T7      | `[Playtest]`            | `[Name]` | `2`             | `21st April` | `T6`       | `Done` |
-| T8      | `[Refine and document]` | `[Name]` | `3`             | `22nd April` | `T7`       | `Done` |
+| ------- | ----------------------- | -------- | --------------: | ------------ | ---------- | ------ |
+| T1      | `[Finalize concept]`    | `[Name]` |             `2` | `1st April`  | `None`     | `Done` |
+| T2      | `[Complete BOM]`        | `[Name]` |             `1` | `8th April`  | `T1`       | `Done` |
+| T3      | `[Test electronics]`    | `[Name]` |             `2` | `15th April` | `T1`       | `Done` |
+| T4      | `[Build structure]`     | `[Name]` |             `4` | `18th April` | `T1`       | `Done` |
+| T5      | `[Write control code]`  | `[Name]` |             `4` | `18th April` | `T3`       | `Done` |
+| T6      | `[Integrate system]`    | `[Name]` |             `4` | `19th April` | `T4, T5`   | `Done` |
+| T7      | `[Playtest]`            | `[Name]` |             `2` | `21st April` | `T6`       | `Done` |
+| T8      | `[Refine and document]` | `[Name]` |             `3` | `22nd April` | `T7`       | `Done` |
 
 ## 13.3 Responsibility Split
 
@@ -883,8 +882,6 @@ Suggested images:
 Example:
 
 ```md
-
-
 
 ```
 
