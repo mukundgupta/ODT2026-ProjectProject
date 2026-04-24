@@ -537,7 +537,10 @@ Suggested sequence:
 - error handling.
 
 **Insert image below:**  
-`[Upload image and link here]`
+<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/42706d87-4e7e-4f83-b7e4-22ad84d44350" />
+<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/66b36423-4d29-474a-9683-0b5e29e17555" />
+
+
 
 ## 10.4 Pseudocode
 
@@ -940,19 +943,21 @@ Describe the final version of your project.
 - `Car tracks accurately`
 - `Projection and car is able to react in real time`
 - `Scaffolding around projector makes it fairly visible even during the day`
+- `visual feedback clealy comunicated interaction`
 
 ## 18.3 What Still Needs Improvement
 
 - `Power Supply to car died quickly, causing wifi to fluctuate`
 - `Sound effects and a customizable game flow could be integrated.`
-- `[Point 3]`
+- `More interction between the projection and car, like trails behind it. `
 
 ## 18.4 What Changed From the Original Plan
 
 How did the project change from the initial idea?
 
 **Response:**  
-`[Write here]`
+`The first concept involved the esp32 tracking its own relative position by using stepper motors and a relative coordinate system, so the map and the car's system would be fully separate. We steered from this idea since we realized that motors can sometimes skip steps and the missed values can pile up due to friction, causing tracking to become highly inacurate over time. We switched to a camera-based tracking system, which fixed the alignment issue and woul also allow us to have to projection react to the car's movement i real-time (currently the obstacles turn yellow when car is close, and blue when car is touching. This could also be expanded to have to car leave a traiool behind it.).`
+`Our very first idea was about a physical obstacle course, but using the current virtual one allowed the project to be more interesting both to play and design.   It opens up the possibilty for further digital/physical interaction, and is not just limited to games.`
 
 ---
 
@@ -965,7 +970,12 @@ What slowed you down?
 How well did you manage time, tasks, and responsibilities?
 
 **Response:**  
-`[Write here]`
+`We mamnaged to use the time we had farily well, integrating the core MVP along with some of our stretch features like projection interaction. We worked efficiently when breaking the project into smaller parts (tracking, motor control, projection), and then integrating them.
+
+What slowed us down was debugging across systems especially when issues could come from hardware, power supply, or code at the same time. Integration took longer than expected because small problems (like motor imbalance or WiFi instability) affected the whole system.
+
+Overall, task division worked well, but we realized that testing integration earlier would have saved time.
+The final outcome `
 
 ## 19.2 Technical Reflection
 
@@ -978,7 +988,9 @@ What did you learn about:
 - integration?
 
 **Response:**  
-`[Write here]`
+`The foremost learning was how to get virtual and physical systems to interact with each other. We used arUko markers, OpenCV and PyGame to create not only an immersive environment but a real-time tracking system for interaction as well. 
+In mechanisms and fabrication, we saw how small physical details (like wheel balance or caster friction) significantly affect behavior. Rapid prototyping using laser cutting helped us iterate quickly.
+In coding, we worked with real-time systems using Python, OpenCV, and MicroPython, and learned how to handle tracking noise using smoothing and constraints. We also learned how to efficiently and properly send and manage communication between devices over WiFi.`
 
 ## 19.3 Design Reflection
 
@@ -992,14 +1004,17 @@ What did you learn about:
 - iteration?
 
 **Response:**  
-`[Write here]`
+`We learned that designing for play is not just about functionality, but about responsiveness and feedback. Small details like the car shaking slightly when blocked or obstacles changing color made the interaction more engaging and understandable. Visual feedback helped communicate rules naturally.`
+`We also realized the importance of iteration. Moving from a physical obstacle course to a projected one made the system more flexible and interesting, and allowed us to explore more possibilities.`
+`Overall, the project showed how combining physical interaction with digital feedback can create a more immersive and playful experience.`
 
 ## 19.4 If You Had One More Week
 
 What would you improve next?
 
 **Response:**  
-`The structure could be more secure allowing for amore permenant place for the camera. Adding a led backplate to the aruko marker on the car would allow it to be tracked better, since in dark environments the tracking stutters when it goes slightly outside of the projection area. We could also make the borders be an obstacles, not allowing the car to go outside of the boundry.`
+`The structure could be more secure allowing for a more permanent place for the camera. Adding a led backplate to the aruko marker on the car would allow it to be tracked better, since in dark environments the tracking stutters when it goes slightly outside of the projection area. We could also make the borders be an obstacles, not allowing the car to go outside of the boundry.`
+`If we had another week we could have integrated most of our stretch features, including physical object detection so that players can place actual objects in the path of the car and the system could detect that as well (if the object was of a set color). This would allow for more of an immersive experience, and blur the line further between digital and physical interaction.`
 
 ` `
 
@@ -1013,20 +1028,20 @@ Before submission, confirm that:
 - [x] Project description is complete
 - [x] Inspiration sources are included
 - [x] Player journey is written
-- [ ] Sketches are added
+- [x] Sketches are added
 - [x] BOM is complete
 - [x] Purchase list is complete
 - [x] Budget summary is complete
-- [ ] Mechanical planning is documented if applicable
+- [x] Mechanical planning is documented if applicable
 - [ ] App planning is documented if applicable
-- [ ] Code flowchart is added
-- [ ] Task breakdown is complete
-- [ ] Weekly logs are updated
+- [x] Code flowchart is added
+- [x] Task breakdown is complete
+- [x] Weekly logs are updated
 - [x] Risk register is complete
-- [ ] Testing log is updated
-- [ ] Playtesting notes are included
-- [ ] Build photos are included
-- [ ] Final reflection is written
+- [x] Testing log is updated
+- [x] Playtesting notes are included
+- [x] Build photos are included
+- [x] Final reflection is written
 
 ---
 
