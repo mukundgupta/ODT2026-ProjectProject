@@ -321,8 +321,8 @@ Example:
 ```md
 
 ```
-<img width="1559" height="1233" alt="image" src="https://github.com/user-attachments/assets/695c6d44-1e1b-4834-aabb-da8c1e412a38" />
 
+<img width="1559" height="1233" alt="image" src="https://github.com/user-attachments/assets/695c6d44-1e1b-4834-aabb-da8c1e412a38" />
 
 ## 7.2 Labeled Build Sketch
 
@@ -337,7 +337,6 @@ Add a sketch with labels showing:
 **Insert image below:**  
 `[Upload image and link here]`
 <img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/95637f31-b4e7-4427-a9e1-4b63fbeb0ac5" />
-
 
 ## 7.3 Approximate Dimensions
 
@@ -418,12 +417,12 @@ Speed is controlled using PWM, allowing slower, controlled movement for accuracy
 
 If your project includes mechanical motion, document the digital planning before fabrication.
 
-| Tool Used                      | File / Link            | What Was Tested                                |
-| ------------------------------ | ---------------------- | ---------------------------------------------- |
-| `Blender models for structure` | `<img width="1600" height="851" alt="image" src="https://github.com/user-attachments/assets/c54f0567-55f3-4806-bcde-effa612e58c4" />
-` | `How the car can look, variations`             |
-| `Fusion 360`                   | `<img width="1600" height="851" alt="image" src="https://github.com/user-attachments/assets/12ef0a31-bbdf-4af5-913d-1f90316582fd" />
-` | `Final physical form with accurate dimensions` |
+| Tool Used                      | File / Link                                                                                                                          | What Was Tested |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | --------------- |
+| `Blender models for structure` | `<img width="1600" height="851" alt="image" src="https://github.com/user-attachments/assets/c54f0567-55f3-4806-bcde-effa612e58c4" /> |                 |
+| `                              | `How the car can look, variations`                                                                                                   |                 |
+| `Fusion 360`                   | `<img width="1600" height="851" alt="image" src="https://github.com/user-attachments/assets/12ef0a31-bbdf-4af5-913d-1f90316582fd" /> |                 |
+| `                              | `Final physical form with accurate dimensions`                                                                                       |                 |
 
 ## 8.5 Changes After Digital Testing
 
@@ -481,12 +480,12 @@ Insert a hand-drawn or software-made circuit diagram.
 
 ## 10.1 Software Tools
 
-| Tool / Platform                | Purpose                   |
-| ------------------------------ | ------------------------- |
-| `[MicroPython]`                | `Control ESP32`               |
-| `[Python/PyGame/OpenCV]`       | `Track markers, game logic, create projection`               |
-| `[Fusion/Blender/Illustrator]` | `[Prototyping structure]` |
-|                                |                           |
+| Tool / Platform                | Purpose                                        |
+| ------------------------------ | ---------------------------------------------- |
+| `[MicroPython]`                | `Control ESP32`                                |
+| `[Python/PyGame/OpenCV]`       | `Track markers, game logic, create projection` |
+| `[Fusion/Blender/Illustrator]` | `[Prototyping structure]`                      |
+|                                |                                                |
 
 ## 10.2 Software Logic
 
@@ -642,8 +641,8 @@ Insert a sketch or screenshot of the app interface.
 | Item                             | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec               | Why This Choice?          |
 | -------------------------------- | --------:| ------- | ------------ | --------------:| ----------------------------- | ------------------------- |
 | `[ESP32]`                        | `1`      | `Yes`   | `No`         | `0`            | `38 Pin ESP32`                | `[To control components]` |
-| `[Motor Driver]`                 | `[1]`    | `[Yes]` | `[No]`       | `0`            | `[LN296]`                     | `[To drive both motors]`       |
-| `[DC Motors and wheel]`          | `[2]`    | `[No]`  | `[Yes]`      | `[150]`        | `[BO Motors and 6 cm wheels]` | `[high torque motors]`                |
+| `[Motor Driver]`                 | `[1]`    | `[Yes]` | `[No]`       | `0`            | `[LN296]`                     | `[To drive both motors]`  |
+| `[DC Motors and wheel]`          | `[2]`    | `[No]`  | `[Yes]`      | `[150]`        | `[BO Motors and 6 cm wheels]` | `[high torque motors]`    |
 | `[Buck Converter]`               | `[1]`    | `[No]`  | `[Yes]`      | `[75]`         |                               |                           |
 | `[Li-ion batteries with holder]` | `[1]`    | `[No]`  | `[Yes]`      | `[200]`        |                               |                           |
 
@@ -827,27 +826,28 @@ What is the single biggest uncertainty in your project at this stage?
 
 ## 16.2 Playtesting Plan
 
-| Question                             | How You Will Check |
-| ------------------------------------ | ------------------ |
-| Do players understand what to do?    | `[Method]`         |
-| Is the interaction satisfying?       | `[Method]`         |
-| Do players want another turn?        | `[Method]`         |
-| Is the challenge balanced?           | `[Method]`         |
-| Is the response clear and immediate? | `[Method]`         |
+| Question                             | How You Will Check                                                                           |
+| ------------------------------------ | -------------------------------------------------------------------------------------------- |
+| Do players understand what to do?    | `Show the setup without explanation and observe if they start controlling the car correctly` |
+| Is the interaction satisfying?       | `Observe reactions (engagement, frustration) and ask for quick feedback after playing`       |
+| Do players want another turn?        | `See if they voluntarily replay or ask to try again`                                         |
+| Is the challenge balanced?           | `Watch if players complete levels too easily or struggle too much`                           |
+| Is the response clear and immediate? | `Check if players notice the car stopping/shaking instantly when near obstacles`             |
 
 ## 16.3 Testing and Debugging Log
 
-| Date     | Problem Found      | Type                                       | What You Tried   | Result                       | Next Action   |
-| -------- | ------------------ | ------------------------------------------ | ---------------- | ---------------------------- | ------------- |
-| `[Date]` | `[Describe issue]` | `[Technical / Mechanical / UI / Gameplay]` | `[What you did]` | `[Worked / Partly / Failed]` | `[Next step]` |
-| `[Date]` | `[Describe issue]` | `[Type]`                                   | `[What you did]` | `[Result]`                   | `[Next step]` |
+| Date          | Problem Found                         | Type         | What You Tried                                | Result               | Next Action                                    |
+| ------------- | ------------------------------------- | ------------ | --------------------------------------------- | -------------------- | ---------------------------------------------- |
+| `18th April`  | `Car not balancing properly`          | `Mechanical` | `Add low-friction caster support to one side` | `Worked`             | `improve caster structure`                     |
+| `[20th April` | `Car drifting to one side`            | `Mechanical` | `Adjusted PWM values for each motor`          | `Worked fairly well` | `Fine-tune further`                            |
+| `20th April`  | `Tracking jitter when car moves fast` | `Technical`  | `Added smoothing and limited movement steps`  | `Partly`             | `Improve Lighting and camera angle (top down)` |
 
 ## 16.4 Playtesting Notes
 
-| Tester                        | What They Did   | What Confused Them | What They Enjoyed | What You Will Change |
-| ----------------------------- | --------------- | ------------------ | ----------------- | -------------------- |
-| `[Peer / friend / classmate]` | `[Observation]` | `[Observation]`    | `[Observation]`   | `[Action]`           |
-| `[Peer / friend / classmate]` | `[Observation]` | `[Observation]`    | `[Observation]`   | `[Action]`           |
+| Tester      | What They Did                        | What Confused Them                    | What They Enjoyed                         | What You Will Change                          |
+| ----------- | ------------------------------------ | ------------------------------------- | ----------------------------------------- | --------------------------------------------- |
+| `Classmate` | `Tried navigating through obstacles` | `Some obstacles ewren't clear enough` | `Liked projection + real car interaction` | `Add a slight red highlight around obstacles` |
+| `Friend`    | `Tested movement controls`           | `Unsure about goal initially`         | `Liked level progression idea`            | `Add clear start/end indicators`              |
 
 ---
 
