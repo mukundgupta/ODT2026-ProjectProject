@@ -719,14 +719,14 @@ Include:
 
 | Task ID | Task                    | Owner    | Estimated Hours | Deadline     | Dependency | Status |
 | ------- | ----------------------- | -------- | ---------------:| ------------ | ---------- | ------ |
-| T1      | `[Finalize concept]`    | `[Name]` | `2`             | `1st April`  | `None`     | `Done` |
-| T2      | `[Complete BOM]`        | `[Name]` | `1`             | `8th April`  | `T1`       | `Done` |
-| T3      | `[Test electronics]`    | `[Name]` | `2`             | `15th April` | `T1`       | `Done` |
-| T4      | `[Build structure]`     | `[Name]` | `4`             | `18th April` | `T1`       | `Done` |
-| T5      | `[Write control code]`  | `[Name]` | `4`             | `18th April` | `T3`       | `Done` |
-| T6      | `[Integrate system]`    | `[Name]` | `4`             | `19th April` | `T4, T5`   | `Done` |
-| T7      | `[Playtest]`            | `[Name]` | `2`             | `21st April` | `T6`       | `Done` |
-| T8      | `[Refine and document]` | `[Name]` | `3`             | `22nd April` | `T7`       | `Done` |
+| T1      | `[Finalize concept]`    | `[Both]` | `2`             | `1st April`  | `None`     | `Done` |
+| T2      | `[Complete BOM]`        | `[Mukund]` | `1`             | `8th April`  | `T1`       | `Done` |
+| T3      | `[Test electronics]`    | `[Mukund]` | `2`             | `15th April` | `T1`       | `Done` |
+| T4      | `[Build structure]`     | `[Manan]` | `4`             | `18th April` | `T1`       | `Done` |
+| T5      | `[Write control code]`  | `[Mukund]` | `4`             | `18th April` | `T3`       | `Done` |
+| T6      | `[Integrate system]`    | `[Manan]` | `4`             | `19th April` | `T4, T5`   | `Done` |
+| T7      | `[Playtest]`            | `[Manan]` | `2`             | `21st April` | `T6`       | `Done` |
+| T8      | `[Refine and document]` | `[Mukund]` | `3`             | `22nd April` | `T7`       | `Done` |
 
 ## 13.3 Responsibility Split
 
