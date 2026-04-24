@@ -181,7 +181,7 @@ Examples:
 | Question                            | Response                                                                                         |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------ |
 | Who is this for?                    | `No specific demographic, anyone who is interested`                                              |
-| Age range                           | ``9+ (but intuitive enough for younger children to play)`                                        |
+| Age range                           | `9+ (but intuitive enough for younger children to play)`                                         |
 | Solo or multiplayer                 | `Currently Solo, can be expanded`                                                                |
 | Expected duration of one round      | `~three minutes`                                                                                 |
 | What should the player feel?        | `Curious, engaged, slightly challenged, and in control of a “real object inside a digital game”` |
@@ -236,7 +236,7 @@ What features are nice to have but not essential?
 - Customizable maps, where players can create their own obstacle layouts
 
 - Use camera-based color tracking to interact with real-world objects instead of only virtual ones
-* Multiple levels with increasing difficulty and different mechanics
+* More levels with increasing difficulty and different mechanics; Coul more interaction (collecting artefacts)
 
 * [Implemented] Visual effects (animations, feedback when near obstacles, level transitions)
 
@@ -813,12 +813,11 @@ What is the single biggest uncertainty in your project at this stage?
 
 ## 16.1 Technical Testing Plan
 
-| What Needs Testing       | How You Will Test It | Success Condition           |
-| ------------------------ | -------------------- | --------------------------- |
-| `[Bluetooth connection]` | `[Method]`           | `[What counts as success?]` |
-| `[Mechanism movement]`   | `[Method]`           | `[What counts as success?]` |
-| `[Sensor behavior]`      | `[Method]`           | `[What counts as success?]` |
-| `[App communication]`    | `[Method]`           | `[What counts as success?]` |
+| What Needs Testing     | How You Will Test It                                                                 | Success Condition                                                                                    |
+| ---------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| `[Wifi connection]`    | `[Check if motor spins via app button]`                                              | `[Both motors accurately respond to wifi signals]`                                                   |
+| `[Marker tracking]`    | `[Setup markers and check position and orientation]`                                 | `[OpenCV accurately displays a rectangle around the arUko marker along with an arrow for direction]` |
+| `[Obstacle Detection]` | `[Move physcal markers and set vistual obstacles to cahnge color when intersecting]` | `[Multiple objects display color change in real time when moving the marker]`                        |
 
 ## 16.2 Playtesting Plan
 
@@ -863,7 +862,21 @@ Include:
 - revisions.
 
 **Response:**  
-`[Write here]`
+`The fabrication process involved designing, manufacturing, assembling, and refining both the physical structure and electronic integration of the system.`
+
+`Design (CAD Modeling):
+The initial model was created using CAD software, where components were designed based on the actual dimensions of the electronic parts. This ensured accurate fitting and minimized errors during assembly.
+Cutting (Laser Cutting):
+The designed parts were fabricated using laser cutting techniques. Sheets were cut precisely according to the CAD model to create the structural base and mounts for components.`
+
+`Components were fixed using adhesives and mechanical supports. Certain parts were intentionally kept modular (not permanently fixed) to allow easy replacement and modification of electronics.
+Surface Finishing:
+Some parts were sanded to smooth rough edges after cutting. Sawdust mixed with adhesive was used to fill gaps and uneven edges, improving structural finish. The final structure was then painted for better aesthetics and durability.`
+
+`Environment Setup (Dark Room Fabrication):
+To enhance projection visibility, a controlled dark environment was created using Z-boards, paper sheets, and bedsheets. This minimized external light interference and improved projection clarity.
+Revisions and Iterations:
+Multiple adjustments were made throughout the process, including refining alignment, improving structural stability, repositioning components, and optimizing the interaction between the physical car and projected environment.`
 
 ## 17.2 Build Photos
 
@@ -905,14 +918,14 @@ Describe the final version of your project.
 
 ## 18.2 What Works Well
 
-- `[Point 1]`
-- `[Point 2]`
-- `[Point 3]`
+- `Car tracks accurately`
+- `Projection and car is able to react in real time`
+- `Scaffolding around projector makes it fairly visible even during the day`
 
 ## 18.3 What Still Needs Improvement
 
-- `[Point 1]`
-- `[Point 2]`
+- `Power Supply to car died quickly, causing wifi to fluctuate`
+- `Sound effects and a customizable game flow could be integrated.`
 - `[Point 3]`
 
 ## 18.4 What Changed From the Original Plan
@@ -967,7 +980,9 @@ What did you learn about:
 What would you improve next?
 
 **Response:**  
-`[Write here]`
+`The structure could be more secure allowing for amore permenant place for the camera. Adding a led backplate to the aruko marker on the car would allow it to be tracked better, since in dark environments the tracking stutters when it goes slightly outside of the projection area. We could also make the borders be an obstacles, not allowing the car to go outside of the boundry.`
+
+` `
 
 ---
 
@@ -976,19 +991,19 @@ What would you improve next?
 Before submission, confirm that:
 
 - [x] Team details are complete
-- [ ] Project description is complete
-- [ ] Inspiration sources are included
-- [ ] Player journey is written
+- [x] Project description is complete
+- [x] Inspiration sources are included
+- [x] Player journey is written
 - [ ] Sketches are added
-- [ ] BOM is complete
-- [ ] Purchase list is complete
-- [ ] Budget summary is complete
+- [x] BOM is complete
+- [x] Purchase list is complete
+- [x] Budget summary is complete
 - [ ] Mechanical planning is documented if applicable
 - [ ] App planning is documented if applicable
 - [ ] Code flowchart is added
 - [ ] Task breakdown is complete
 - [ ] Weekly logs are updated
-- [ ] Risk register is complete
+- [x] Risk register is complete
 - [ ] Testing log is updated
 - [ ] Playtesting notes are included
 - [ ] Build photos are included
