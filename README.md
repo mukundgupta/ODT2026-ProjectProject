@@ -1,4 +1,4 @@
-# Open Design and Technology
+<img width="1582" height="911" alt="image" src="https://github.com/user-attachments/assets/4eb5b111-3b55-451b-92cd-3da81528288d" /># Open Design and Technology
 
 ## Final Project README
 
@@ -420,7 +420,8 @@ If your project includes mechanical motion, document the digital planning before
 
 | Tool Used                      | File / Link            | What Was Tested                                |
 | ------------------------------ | ---------------------- | ---------------------------------------------- |
-| `Blender models for structure` | `` | `How the car can look, variations`             |
+| `Blender models for structure` | `<img width="1600" height="851" alt="image" src="https://github.com/user-attachments/assets/c54f0567-55f3-4806-bcde-effa612e58c4" />
+` | `How the car can look, variations`             |
 | `Fusion 360`                   | `<img width="1600" height="851" alt="image" src="https://github.com/user-attachments/assets/12ef0a31-bbdf-4af5-913d-1f90316582fd" />
 ` | `Final physical form with accurate dimensions` |
 
