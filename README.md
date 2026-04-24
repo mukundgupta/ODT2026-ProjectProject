@@ -1043,6 +1043,7 @@ Before submission, confirm that:
 - [x] Playtesting notes are included
 - [x] Build photos are included
 - [x] Final reflection is written
+<img width="1131" height="1600" alt="image" src="https://github.com/user-attachments/assets/3ae2ba11-1365-435a-9e14-f691484a4012" />
 
 ---
 
