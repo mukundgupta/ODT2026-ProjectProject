@@ -1,4 +1,4 @@
-<img width="1582" height="911" alt="image" src="https://github.com/user-attachments/assets/4eb5b111-3b55-451b-92cd-3da81528288d" /># Open Design and Technology
+# Open Design and Technology
 
 ## Final Project README
 
