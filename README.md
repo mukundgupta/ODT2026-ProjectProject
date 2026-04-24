@@ -898,12 +898,23 @@ Suggested images:
 - mechanism test,
 - app screenshot,
 - final build.
+- <img width="960" height="1280" alt="WhatsApp Image 2026-04-24 at 9 46 02 AM (1)" src="https://github.com/user-attachments/assets/74baa570-5770-483e-be6d-d2f03386e37c" />
 
-Example:
+<img width="1280" height="960" alt="WhatsApp Image 2026-04-24 at 9 46 02 AM" src="https://github.com/user-attachments/assets/249d0757-08fc-4539-a53d-eebeecb1dfe9" />
+<img width="1280" height="960" alt="WhatsApp Image 2026-04-24 at 9 46 03 AM" src="https://github.com/user-attachments/assets/832a13aa-64fb-4d61-8eb9-af2de39f7f0f" />
+<img width="1280" height="960" alt="WhatsApp Image 2026-04-24 at 9 46 03 AM (3)" src="https://github.com/user-attachments/assets/53e1b241-035e-4f2d-9da8-8637af0d94ab" />
+<img width="867" height="1156" alt="image" src="https://github.com/user-attachments/assets/9ff87177-1cd9-47f8-87e1-8ff1e99b06a0" />
 
-```md
+<img width="1280" height="960" alt="WhatsApp Image 2026-04-24 at 9 46 04 AM" src="https://github.com/user-attachments/assets/66cf90f6-58d0-4da1-8a4e-5718cfd02c81" />
 
-```
+
+<img width="1280" height="960" alt="WhatsApp Image 2026-04-24 at 9 46 03 AM (2)" src="https://github.com/user-attachments/assets/3a62ce9c-10dd-47c8-aa2c-abdf86f1d55a" />
+
+<img width="960" height="1280" alt="WhatsApp Image 2026-04-24 at 9 46 03 AM (1)" src="https://github.com/user-attachments/assets/3053a2b0-1c81-44df-a153-90555a41ce06" />
+
+<img width="867" height="1156" alt="WhatsApp Image 2026-04-23 at 11 43 13 AM" src="https://github.com/user-attachments/assets/5c96dc82-32f7-4cbc-919c-0e5fc85683d9" />
+
+
 
 ## 17.3 Version History
 
