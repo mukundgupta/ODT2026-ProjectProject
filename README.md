@@ -58,7 +58,7 @@ By the final review, this README should clearly show:
 
 ## 1.1 Studio / Group Name
 
-`Project Project`
+`Project^2`
 
 ## 1.2 Team Members
 
