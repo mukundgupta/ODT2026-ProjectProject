@@ -920,9 +920,9 @@ Suggested images:
 
 | Version | Date     | What Changed | Why        |
 | ------- | -------- | ------------ | ---------- |
-| `v1`    | `[Date]` | `[Describe]` | `[Reason]` |
-| `v2`    | `[Date]` | `[Describe]` | `[Reason]` |
-| `v3`    | `[Date]` | `[Describe]` | `[Reason]` |
+| `v1`    | `17th April` | `Cardboard Prototype` | `Quick test of components and movement` |
+| `v2`    | `18th April` | `Better, Firmer structure` | `making it less flimsy` |
+| `v3`    | `20th April` | `Final lazer cut model` | `Structure, aesthetics` |
 
 ---
 
@@ -933,7 +933,7 @@ Suggested images:
 Describe the final version of your project.
 
 **Response:**  
-`[Write here]`
+`The final version looked and felt like a proper game, especially with the drawn game maps. The game logic intself was fairly simple to understand since it takes from a lot of common game tropes. The caster on the car was situated only on one side, which ended up adding a bit more playfulness since when the car stopped suddenly(when "hitting" an obstacle), it veered forward almost like suspension. The entire projected structure, especially in the dark, looked visually imersive, though daytime visibility could be improved by adding a full covered fabrication/tent.`
 
 ## 18.2 What Works Well
 
