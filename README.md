@@ -419,7 +419,8 @@ If your project includes mechanical motion, document the digital planning before
 
 | Tool Used                      | File / Link                                                                                                                          | What Was Tested |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | --------------- |
-| `Blender models for structure` | `<img width="1600" height="851" alt="image" src="https://github.com/user-attachments/assets/c54f0567-55f3-4806-bcde-effa612e58c4" /> |                 |
+| `Blender models for structure` | <img width="1919" height="966" alt="image" src="https://github.com/user-attachments/assets/a8234488-b156-4dbd-a5b8-23a683820646" />
+ |                 |
 | `                              | `How the car can look, variations`                                                                                                   |                 |
 | `Fusion 360`                   | `<img width="1600" height="851" alt="image" src="https://github.com/user-attachments/assets/12ef0a31-bbdf-4af5-913d-1f90316582fd" /> |                 |
 | `                              | `Final physical form with accurate dimensions`                                                                                       |                 |
