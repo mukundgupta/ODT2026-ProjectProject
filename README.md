@@ -321,6 +321,8 @@ Example:
 ```md
 
 ```
+<img width="1559" height="1233" alt="image" src="https://github.com/user-attachments/assets/695c6d44-1e1b-4834-aabb-da8c1e412a38" />
+
 
 ## 7.2 Labeled Build Sketch
 
@@ -334,6 +336,8 @@ Add a sketch with labels showing:
 
 **Insert image below:**  
 `[Upload image and link here]`
+<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/95637f31-b4e7-4427-a9e1-4b63fbeb0ac5" />
+
 
 ## 7.3 Approximate Dimensions
 
@@ -416,8 +420,9 @@ If your project includes mechanical motion, document the digital planning before
 
 | Tool Used                      | File / Link            | What Was Tested                                |
 | ------------------------------ | ---------------------- | ---------------------------------------------- |
-| `Blender models for structure` | `[Link or screenshot]` | `How the car can look, variations`             |
-| `Fusion 360`                   | `[Link or screenshot]` | `Final physical form with accurate dimensions` |
+| `Blender models for structure` | `` | `How the car can look, variations`             |
+| `Fusion 360`                   | `<img width="1600" height="851" alt="image" src="https://github.com/user-attachments/assets/12ef0a31-bbdf-4af5-913d-1f90316582fd" />
+` | `Final physical form with accurate dimensions` |
 
 ## 8.5 Changes After Digital Testing
 
@@ -477,8 +482,8 @@ Insert a hand-drawn or software-made circuit diagram.
 
 | Tool / Platform                | Purpose                   |
 | ------------------------------ | ------------------------- |
-| `[MicroPython]`                | `[Purpose]`               |
-| `[Python/PyGame/OpenCV]`       | `[Purpose]`               |
+| `[MicroPython]`                | `Control ESP32`               |
+| `[Python/PyGame/OpenCV]`       | `Track markers, game logic, create projection`               |
 | `[Fusion/Blender/Illustrator]` | `[Prototyping structure]` |
 |                                |                           |
 
