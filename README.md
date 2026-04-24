@@ -464,6 +464,8 @@ Insert a hand-drawn or software-made circuit diagram.
 
 **Insert image below:**  
 `[Upload image and link here]`
+<img width="867" height="1156" alt="WhatsApp Image 2026-04-24 at 9 35 27 AM" src="https://github.com/user-attachments/assets/2154c287-b58a-4205-98c3-1c93e1b00565" />
+
 
 ## 9.4 Power Plan
 
