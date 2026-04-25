@@ -1,4 +1,5 @@
-<img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/ebfc79e7-d569-440a-ba9f-f50a40c65a00" />
+<img width="800" height="450" alt="demo" src="https://github.com/user-attachments/assets/d57b5584-44ed-4ca7-8018-cf4c67784048" />
+
 
 
 # Open Design and Technology
