@@ -1,3 +1,6 @@
+<img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/ebfc79e7-d569-440a-ba9f-f50a40c65a00" />
+
+
 # Open Design and Technology
 
 ## Final Project README
